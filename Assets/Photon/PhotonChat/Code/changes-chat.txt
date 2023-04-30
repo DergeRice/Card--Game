@@ -143,4 +143,4 @@ Version 4.0.0.0 (23. May 2014 - rev2614)
     Changed: Most classes are defined in their own file now.
     Removed: Folders "Shared" and their subfolders. This gives a much better overview.
     Added: Handling for event SubscribeResponse. This is not actually a response but gives you info about channels that got subscribed (e.g. when you re-login quickly or when a user is logged in in multiple clients).
-    Added: HandleSubscriptionResults() method to handle the event and proper responses.
+    Added: HandleSubscriptionResults() method to handle the event and proper responses.d 
