@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ShuffleCard : MonoBehaviour
 {
-    List<Player> Players = new List<Player>();// Player Player1;
-    public void GiveCard(Player P) //Give A to One Card
+    List<GamePlayer> Players = new List<GamePlayer>();// Player Player1;
+    public void GiveCard(GamePlayer P) //Give A to One Card
     {
         P.GetCard();
     }
@@ -15,7 +15,7 @@ public class ShuffleCard : MonoBehaviour
         
         for (int i = 0; i < 5; i++)
         {
-            Player P = new Player();
+            GamePlayer P = new GamePlayer();
             P.MakePlayer("P"+(i).ToString()); 
             Players.Add(P);
         }
@@ -36,7 +36,7 @@ public class ShuffleCard : MonoBehaviour
     }
 }
 
-public class Player
+public class GamePlayer
 {
     string PlayerName;
     int Point;
