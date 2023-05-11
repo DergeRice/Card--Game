@@ -2,20 +2,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+using System;
+using Photon;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class CardCreator : MonoBehaviour
 {
     [SerializeField]
-    Sprite[] CardImg = new Sprite[12*5];
+    Sprite[] CardImg = new Sprite[58];
 
     [SerializeField]
-    GameObject CardPrefeb,CardParent;
-    [ContextMenu("dd")]
+    GameObject CardPrefeb,CardParent,CardDeck,CardCreatorObj;
+    [SerializeField]
+    PhotonView PV;
+
+    NetworkManager Network;
+
+    private void Awake() 
+    {
+       Network = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
+       Network.CardDeck = CardCreatorObj;
+       Debug.Log("good");
+    }
+
     public GameObject MakeCard()
     {
         GameObject MadeCard = Instantiate(CardPrefeb,CardParent.transform);
-        MadeCard.transform.GetChild(0).GetComponent<Image>().sprite = CardImg[Random.Range(0,12*5)];
+        MadeCard.transform.GetChild(0).GetComponent<Image>().sprite = CardImg[UnityEngine.Random.Range(0,CardImg.Length)];
 
         return MadeCard;
+    }
+
+    [ContextMenu("dd")]
+    public List<GameObject> MakeCardDeck()
+    {
+        List<Sprite> shuffledCards = CardImg.OrderBy(x => Guid.NewGuid()).ToList();
+
+        List<GameObject> MadeCardDeck = new List<GameObject>();
+
+        
+        for (int i = 0; i < CardImg.Length; i++)
+        {
+            GameObject MadeCard = Instantiate(CardPrefeb,CardCreatorObj.transform);
+            MadeCard.transform.GetChild(0).GetComponent<Image>().sprite = shuffledCards[i];
+            MadeCardDeck.Add(MadeCard);
+        }
+        Network.InitialCard();
+        
+        
+        return MadeCardDeck;
     }
 }

@@ -17,12 +17,13 @@ public class EnterLobby : MonoBehaviour
     GameObject LobbyRoomCount, NoRoomIndicator, CreateRoom, RoomPrefeb;
 
     [SerializeField]
-    GameObject PlayerParent, PlayerPrefeb, RoomPanel;
+    GameObject PlayerParent, PlayerPrefeb, RoomPanel, LoadingPannel;
     
     string  NickName, RoomName;
-    
 
-
+    private void Start() {
+        NetworkManager.LoadingPannel = this.LoadingPannel;
+    }
     private void Update() 
     {
         NoRoomCheck();
@@ -40,7 +41,7 @@ public class EnterLobby : MonoBehaviour
     {
         PopUp.SetActive(true);
         NetworkManager.LogInGame();
-       
+       LoadingPannel.SetActive(true);
         
     }
 
@@ -55,6 +56,7 @@ public class EnterLobby : MonoBehaviour
         NetworkManager.JoinLobby();
         PopUp.SetActive(false);
         Lobby.SetActive(true);
+        RoomPanel.SetActive(false);
 
         NetworkManager.RoomPrefeb = this.RoomPrefeb;
         NetworkManager.RoomParent = this.LobbyRoomCount;
@@ -86,4 +88,13 @@ public class EnterLobby : MonoBehaviour
         RoomPanel.SetActive(true);
         NetworkManager.JoinRoomList(RoomName);
     }
+
+
+    public void ExitFromRoom()
+    {
+        NetworkManager.LeaveRoomList();
+        PopupLobby();
+        //NetworkManager.room
+    }
+
 }

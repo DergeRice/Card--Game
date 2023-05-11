@@ -1,25 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class ShuffleCard : MonoBehaviour
 {
-    List<GamePlayer> Players = new List<GamePlayer>();// Player Player1;
-    public void GiveCard(GamePlayer P) //Give A to One Card
-    {
-        P.GetCard();
-    }
 
+    [SerializeField]
+    GameObject Hand;
+    List<GamePlayer> Players = new List<GamePlayer>();// Player Player1;
+
+    NetworkManager network;
+
+    PhotonView PV;
+
+    
+
+    [ContextMenu("card gogo")]
     public void Initial_Card()
     {
-        
-        for (int i = 0; i < 5; i++)
-        {
-            GamePlayer P = new GamePlayer();
-            P.MakePlayer("P"+(i).ToString()); 
-            Players.Add(P);
-        }
-
         for (int i = 0; i < Players.Count; i++)
         {
             for (int j = 0; j < 5; j++)
@@ -29,28 +30,67 @@ public class ShuffleCard : MonoBehaviour
         }
         
     }
-    [ContextMenu("Start Game")]
+    
+    private void StartGame() 
+    {
+        foreach (Player p in PhotonNetwork.PlayerList)
+        {
+            GamePlayer gamePlayer = new GamePlayer();
+            gamePlayer.MakePlayer("P"+p.ActorNumber.ToString()); 
+            gamePlayer.Hand = Hand;
+            Players.Add(gamePlayer);
+
+            GameObject playerObject = PhotonView.Find(p.ActorNumber).gameObject;
+            PhotonView playerPhotonView = playerObject.GetComponent<PhotonView>();
+            if (playerPhotonView != null)
+            {
+                gamePlayer.ThisPlayerView = playerPhotonView;
+            }
+            Debug.Log(gamePlayer.PlayerName+gamePlayer.ThisPlayerView.ToString()+"DDDD");
+        }
+        PV = GetComponent<PhotonView>();
+    }
+
     private void Start() 
     {
-        Initial_Card();
+        network = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
+        StartGame();
+        GameObject.Find("GameManager").GetComponent<CardCreator>().MakeCardDeck();
+    }
+
+    public void GiveCard(GamePlayer P) //Give A to One Card
+    {
+        // if(P.ThisPlayerView.Owner == PhotonNetwork.MasterClient)
+        // {
+        //     P.GetCard();
+        // }
+        // else 
+        PV.RPC("GetCard", P.ThisPlayerView.Owner);
     }
 }
 
-public class GamePlayer
+public class GamePlayer : MonoBehaviour 
 {
-    string PlayerName;
+    public string PlayerName;
     int Point;
     int CardCount;
 
     bool HavingRobCard;
     bool HavingEXCard;
     bool HavingPROTECTCard;
+
+    public GameObject Hand;
+
+    public PhotonView ThisPlayerView;
     List<GameObject> HavingCard = new List<GameObject>();
 
+    [PunRPC]
     public void GetCard()
     {
         this.CardCount++;
-        Debug.Log(this.PlayerName.ToString()+"/"+this.CardCount.ToString());
+        Instantiate(NetworkManager.cardDeck.transform.GetChild(0).gameObject,Hand.transform);
+        Destroy(NetworkManager.cardDeck.transform.GetChild(0).gameObject);
+        Debug.Log("tlqkffhadk");
     }
     public void MakePlayer(string A)
     {
