@@ -24,7 +24,6 @@ public class CardCreator : MonoBehaviour
     {
        Network = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
        Network.CardDeck = CardCreatorObj;
-       Debug.Log("good");
     }
 
     public GameObject MakeCard()
@@ -46,10 +45,10 @@ public class CardCreator : MonoBehaviour
         for (int i = 0; i < CardImg.Length; i++)
         {
             GameObject MadeCard = Instantiate(CardPrefeb,CardCreatorObj.transform);
+            MadeCard.name = "Card"+i.ToString();
             MadeCard.transform.GetChild(0).GetComponent<Image>().sprite = shuffledCards[i];
             MadeCardDeck.Add(MadeCard);
         }
-        Network.InitialCard();
         
         
         return MadeCardDeck;

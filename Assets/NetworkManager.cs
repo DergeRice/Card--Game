@@ -30,7 +30,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
 
 
     public GameObject CardDeck {get; set;}
+    public static NetworkManager networkManager;
 
+    public GameObject MyHand;
+    public List<GameObject> PlayersHand = new List<GameObject>();
     
 
     private void Start() 
@@ -49,7 +52,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     }
     void Awake() 
     {
-        DontDestroyOnLoad(transform.gameObject);
+        networkManager = this;
+        DontDestroyOnLoad(gameObject);
     }
     public static void JoinLobby()
     {
@@ -61,7 +65,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
 
     public override void OnJoinedLobby()
     {
-        Debug.Log("나 로비야");
+       // Debug.Log("나 로비야");
         ShowMeRoomList(); 
 
     }
@@ -69,13 +73,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     public static void CreateRoomList(string RoomName)
     {
         PhotonNetwork.CreateRoom(RoomName,new RoomOptions { MaxPlayers = 4 });
-        Debug.Log(RoomName);
+        //Debug.Log(RoomName);
         
     }
 
     public static void JoinRoomList(string RoomName)
     {
-        Debug.Log($"JoinedRoom: {RoomName}");
+       // Debug.Log($"JoinedRoom: {RoomName}");
         PhotonNetwork.JoinRoom(RoomName);
         RoomNAME = RoomName;
     }
@@ -88,7 +92,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     
     public static void RefreshRoom()
     {
-        Debug.Log(PhotonNetwork.PlayerList);
+        //Debug.Log(PhotonNetwork.PlayerList);
     }
 
 
@@ -112,7 +116,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
         }
 
         ShowMeRoomList();
-        Debug.Log(roomList.Count+"update");
+       // Debug.Log(roomList.Count+"update");
     }
 
     public static int GetRoomNum(string RoomName)
@@ -174,7 +178,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
             GameObject temp = Instantiate(PlayerPrefeb, PlayerParent.transform);
             temp.transform.Find("PlayerName").gameObject.GetComponent<Text>().text = player.NickName;
         }
-        Debug.Log($"Last Player Count: {ThisRoomPlayerlist.Count}");
+       // Debug.Log($"Last Player Count: {ThisRoomPlayerlist.Count}");
         
     }
 
@@ -191,7 +195,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
 
     public override void OnJoinedRoom()
     {
-        Debug.Log($"방 입장 완료");
+        //Debug.Log($"방 입장 완료");
         ShowMePlayerList();
         //Debug.Log(PhotonNetwork.CurrentRoom.GetPlayer(0,true));
         
@@ -209,7 +213,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
             // PhotonNetwork.CurrentRoom.IsOpen = false;
             // PhotonNetwork.CurrentRoom.IsVisible = false;
             // PhotonNetwork.DestroyPlayerObjects(PhotonNetwork.LocalPlayer);
-            Debug.Log("문 닫고 나간다");
+            //Debug.Log("문 닫고 나간다");
             MyRoomList.Remove(PhotonNetwork.CurrentRoom);
             //PhotonNetwork.CurrentRoom.EmptyRoomTtl = 1;
             //MyRoomList.Remove(PhotonNetwork.CurrentRoom);
@@ -218,7 +222,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
         PhotonNetwork.LeaveRoom(true);
         // NetworkManager.JoinLobby();
         
-        Debug.Log("나 나간다");
+        //Debug.Log("나 나간다");
     }
 
     public override void OnLeftRoom()
@@ -232,6 +236,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
      {
         PlayerParent.GetComponent<PlayerPhotonSC>().SetReady(PlayerName,Ready);       
      }
+
+    
 
     public void ReadBtnEntered()
     {
@@ -267,21 +273,38 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     }
 
     #region InGame
-    public void InitialCard()
+
+    public void GiveCard(int CardNum,int PlayerNum)
     {
-        if(PhotonNetwork.IsMasterClient) 
+        if(PhotonNetwork.IsMasterClient)
         {
-            PV.RPC("SpawnCardDeck", RpcTarget.All);
+            PV.RPC("SpreadCardInfo", RpcTarget.AllBuffered, CardNum, PlayerNum);
         }
+        
     }
 
     [PunRPC]
     public void SpawnCardDeck()
     {
-        cardDeck = Instantiate(CardDeck);
-        cardDeck.name = "ThisGame";
+        //cardDeck = Instantiate(CardDeck);
+        //cardDeck.name = "ThisGame";
         //Debug.Log("Spawned");
     }
+
+    [PunRPC]
+    public void SpreadCardInfo(int CardNum,int PlayerNum)
+    {
+        GameObject CardDeck = GameObject.Find("CardDeck");
+        Debug.Log(CardNum+"/"+CardDeck.transform.childCount);
+        GameObject Card = CardDeck.transform.GetChild(CardNum).gameObject;
+        
+        Card.transform.parent = PlayersHand[PlayerNum].GetComponent<PlayerScript>().HandCanvas.transform;
+        Card.GetComponent<RectTransform>().localPosition = Vector3.zero;
+        Card.GetComponent<RectTransform>().localRotation = Quaternion.Euler(0,0,0);
+        //Card.transform.rotation = Quaternion.Euler(0,0,0);
+        Card.transform.localScale = new Vector3(2,2,2);
+    }
+
 
     
     #endregion 
