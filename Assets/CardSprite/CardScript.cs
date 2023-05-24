@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class CardScript : MonoBehaviour
+public class CardScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerExitHandler, IPointerUpHandler, IPointerEnterHandler
 {
     public string CardType;
 
@@ -23,20 +24,36 @@ public class CardScript : MonoBehaviour
     GameObject CardImg;
     string CardName;
 
+    [SerializeField] GameObject OrginParent;
+    
+
+
+    public bool isDragging = false;
+    private RectTransform rectTransform;
+    private Vector2 offset;
+
+    public Vector2 ScaleOffset;
+
     
     // Start is called before the first frame update
     void Start()
     {
+        ScaleOffset = new Vector2(1,0.7f);
         CardName = CardImg.GetComponent<Image>().sprite.name;
         GetCardType();
         GetOperator();
         GetSpecial();
+
+        rectTransform = GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-         
+        // if(isDragging && Input.GetMouseButtonUp(0))
+        // {
+        //     OnPointerUp();
+        // }    
     }
     #region  CardType
     void GetCardType()
@@ -166,4 +183,46 @@ public class CardScript : MonoBehaviour
 
         if(SpecialCard != null) IsSpecial = true;
     }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        OrginParent = transform.parent.gameObject;
+        transform.parent = DragAndDrop.dragAndDrop.MovingCanvas.transform;
+        isDragging = true;
+        offset = rectTransform.anchoredPosition - eventData.position;
+
+        rectTransform.anchoredPosition = (eventData.position * ScaleOffset) + offset;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (isDragging)
+        {
+            rectTransform.anchoredPosition = (eventData.position * ScaleOffset) + offset;
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+
+    }
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        Debug.Log("call");
+        transform.parent = OrginParent.transform;
+        isDragging = false;
+        
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        
+    }
+
+
+    // public void OnPointerUp()
+    // {
+    //     transform.parent = OrginParent.transform;
+    //     isDragging = false;
+    // }
 }

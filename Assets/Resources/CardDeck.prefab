@@ -30,7 +30,7 @@ RectTransform:
   m_GameObject: {fileID: 127956713345111354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 1499527711606234781}
   m_Father: {fileID: 7762782965937752166}
@@ -113,6 +113,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 6528300350444578487}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &3213003416400441876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +243,7 @@ RectTransform:
   m_GameObject: {fileID: 172171472880373306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 4259087998184644506}
   m_Father: {fileID: 7762782965937752166}
@@ -323,6 +326,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 655122499112268482}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &6721823777919800245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,7 +456,7 @@ RectTransform:
   m_GameObject: {fileID: 417169761500056527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 8738911888015369689}
   m_Father: {fileID: 7762782965937752166}
@@ -533,6 +539,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 8826344704482426093}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &5711181296775165825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,7 +594,7 @@ RectTransform:
   m_GameObject: {fileID: 471382687911022608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 881586379806711901}
   m_Father: {fileID: 7762782965937752166}
@@ -668,6 +677,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 5936253245032291457}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4033740414571230053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,7 +732,7 @@ RectTransform:
   m_GameObject: {fileID: 484068509616577671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3310618750134514349}
   m_Father: {fileID: 7762782965937752166}
@@ -803,6 +815,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 244261916072353094}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &8912270628555424351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,7 +1170,7 @@ RectTransform:
   m_GameObject: {fileID: 856428647285924084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 7868340317823151314}
   m_Father: {fileID: 7762782965937752166}
@@ -1238,6 +1253,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3639762271819660209}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4970565230983244844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1440,7 +1458,7 @@ RectTransform:
   m_GameObject: {fileID: 1091880147477354684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 2606048016381264191}
   m_Father: {fileID: 7762782965937752166}
@@ -1523,6 +1541,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 9055293977736861447}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &863565251999414702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,7 +1596,7 @@ RectTransform:
   m_GameObject: {fileID: 1218925684444612451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3142285856528434054}
   m_Father: {fileID: 7762782965937752166}
@@ -1658,6 +1679,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3518682671737719888}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &8827874852694412200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1710,7 +1734,7 @@ RectTransform:
   m_GameObject: {fileID: 1236372072658235071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 8644207556488157341}
   m_Father: {fileID: 7762782965937752166}
@@ -1793,6 +1817,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 2649579086970955976}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &1615486678525494097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,7 +1872,7 @@ RectTransform:
   m_GameObject: {fileID: 1261557126707975274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 2062203182847784913}
   m_Father: {fileID: 7762782965937752166}
@@ -1928,6 +1955,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 5785358944367613645}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &3287363508555835050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1980,7 +2010,7 @@ RectTransform:
   m_GameObject: {fileID: 1290859616913240989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 2408489903758372646}
   m_Father: {fileID: 7762782965937752166}
@@ -2063,6 +2093,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 6102379518689018781}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &7290636798953614824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2115,7 +2148,7 @@ RectTransform:
   m_GameObject: {fileID: 1417809430036263592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3728949646453693743}
   m_Father: {fileID: 7762782965937752166}
@@ -2198,6 +2231,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 5108347287763261915}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &1424411956575015544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2715,7 +2751,7 @@ RectTransform:
   m_GameObject: {fileID: 1897948107943088591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 1056307871963800318}
   m_Father: {fileID: 7762782965937752166}
@@ -2798,6 +2834,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3581544652709305717}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &5728669645267787573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2925,7 +2964,7 @@ RectTransform:
   m_GameObject: {fileID: 2051147388812267737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 5064171423605176044}
   m_Father: {fileID: 7762782965937752166}
@@ -3008,6 +3047,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 7838503261352984375}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &8265618822842279960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3060,7 +3102,7 @@ RectTransform:
   m_GameObject: {fileID: 2126596894398555170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3777247837900607122}
   m_Father: {fileID: 7762782965937752166}
@@ -3143,6 +3185,9 @@ MonoBehaviour:
   GetCardAmount: 2
   IsUsed: 0
   CardImg: {fileID: 6955805913915592490}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &109363228648224428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3345,7 +3390,7 @@ RectTransform:
   m_GameObject: {fileID: 2314579571745119804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 1274834872918723963}
   m_Father: {fileID: 7762782965937752166}
@@ -3428,6 +3473,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 1880149946094425299}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &509302817910899367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3480,7 +3528,7 @@ RectTransform:
   m_GameObject: {fileID: 2354321782606197994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3571737061364203753}
   m_Father: {fileID: 7762782965937752166}
@@ -3563,6 +3611,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 133746127808866723}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &6317448003302192667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3615,7 +3666,7 @@ RectTransform:
   m_GameObject: {fileID: 2418100153885311345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 4570474112656812757}
   m_Father: {fileID: 7762782965937752166}
@@ -3698,6 +3749,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 5328738112013252607}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &664745285509933516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3750,7 +3804,7 @@ RectTransform:
   m_GameObject: {fileID: 2468906158667401248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3160308554889768173}
   m_Father: {fileID: 7762782965937752166}
@@ -3833,6 +3887,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 8251509040352003337}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4313720195906667961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3885,7 +3942,7 @@ RectTransform:
   m_GameObject: {fileID: 2506013271010636553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3032158415187162827}
   m_Father: {fileID: 7762782965937752166}
@@ -3968,6 +4025,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3803825602038435107}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &2012690750386984949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4020,7 +4080,7 @@ RectTransform:
   m_GameObject: {fileID: 2513587268519509223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 6325518754391585368}
   m_Father: {fileID: 7762782965937752166}
@@ -4103,6 +4163,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 825356692590160534}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &2046369284978040271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4155,7 +4218,7 @@ RectTransform:
   m_GameObject: {fileID: 2530007590820621087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 7134765398677232488}
   m_Father: {fileID: 7762782965937752166}
@@ -4238,6 +4301,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 5334967430952826888}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4571663195853303820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4290,7 +4356,7 @@ RectTransform:
   m_GameObject: {fileID: 2560640289237854972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 5273885659606717900}
   m_Father: {fileID: 7762782965937752166}
@@ -4373,6 +4439,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 6259005533768907449}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &7062930297983558232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4575,7 +4644,7 @@ RectTransform:
   m_GameObject: {fileID: 2958655950062984195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 580089363017126003}
   m_Father: {fileID: 7762782965937752166}
@@ -4658,6 +4727,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 9051923367509065188}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &3659626048666446650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4710,7 +4782,7 @@ RectTransform:
   m_GameObject: {fileID: 3144364966502711034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3435904107601917704}
   m_Father: {fileID: 7762782965937752166}
@@ -4793,6 +4865,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 2780928077510133989}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &2645545442124386015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4920,7 +4995,7 @@ RectTransform:
   m_GameObject: {fileID: 3204951778547705538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 9065947927463204155}
   m_Father: {fileID: 7762782965937752166}
@@ -5003,6 +5078,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 1704393721680318890}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4395593346414049888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5205,7 +5283,7 @@ RectTransform:
   m_GameObject: {fileID: 3532812825795930257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 2436698941778675498}
   m_Father: {fileID: 7762782965937752166}
@@ -5288,6 +5366,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 486173270886513596}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &5916797682848876249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5415,7 +5496,7 @@ RectTransform:
   m_GameObject: {fileID: 3616443045903793540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 4688329826770014906}
   m_Father: {fileID: 7762782965937752166}
@@ -5498,6 +5579,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 5937938600945041769}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &7050915140332448943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5925,7 +6009,7 @@ RectTransform:
   m_GameObject: {fileID: 3838221485114040648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 8870793357396367495}
   m_Father: {fileID: 7762782965937752166}
@@ -6008,6 +6092,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 6840537677450482812}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &8695419771462337185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6285,7 +6372,7 @@ RectTransform:
   m_GameObject: {fileID: 4863116375631234901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 2403945211253205849}
   m_Father: {fileID: 7762782965937752166}
@@ -6368,6 +6455,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 6410508180280171357}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4761465849734218414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6420,7 +6510,7 @@ RectTransform:
   m_GameObject: {fileID: 4928706250652360382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 764999850812489586}
   m_Father: {fileID: 7762782965937752166}
@@ -6503,6 +6593,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 6151938010596154507}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &280930468033101131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6555,7 +6648,7 @@ RectTransform:
   m_GameObject: {fileID: 4936247476124304764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 7990240668229826138}
   m_Father: {fileID: 7762782965937752166}
@@ -6638,6 +6731,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 8891038104653426678}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &5954491476050883448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6915,7 +7011,7 @@ RectTransform:
   m_GameObject: {fileID: 5381353069187334653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 1527304430197831932}
   m_Father: {fileID: 7762782965937752166}
@@ -6998,6 +7094,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 902733240396548091}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4577979640103314694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7050,7 +7149,7 @@ RectTransform:
   m_GameObject: {fileID: 5498891325594000931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 7316055296107695842}
   m_Father: {fileID: 7762782965937752166}
@@ -7133,6 +7232,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 1595179543335645798}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4175320578033139112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7185,7 +7287,7 @@ RectTransform:
   m_GameObject: {fileID: 5678864119556230260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 8616719279340365300}
   m_Father: {fileID: 7762782965937752166}
@@ -7268,6 +7370,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 1009349476825597932}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4917364560381656540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7320,7 +7425,7 @@ RectTransform:
   m_GameObject: {fileID: 5772275447058070710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 4327982595399539986}
   m_Father: {fileID: 7762782965937752166}
@@ -7403,6 +7508,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 8597758577367406183}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &3949902839146842106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7530,7 +7638,7 @@ RectTransform:
   m_GameObject: {fileID: 5786157265365942710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 1122363335951229878}
   m_Father: {fileID: 7762782965937752166}
@@ -7613,6 +7721,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3674084355588472319}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &6688223664422940211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7815,7 +7926,7 @@ RectTransform:
   m_GameObject: {fileID: 5982157263139781337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3782034398731413410}
   m_Father: {fileID: 7762782965937752166}
@@ -7898,6 +8009,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 617656571407161931}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &6633634705168131270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7950,7 +8064,7 @@ RectTransform:
   m_GameObject: {fileID: 6028012937746797225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 8326848595604210377}
   m_Father: {fileID: 7762782965937752166}
@@ -8033,6 +8147,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 4862917297487487182}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &8020506810525842931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8385,7 +8502,7 @@ RectTransform:
   m_GameObject: {fileID: 6283521663722955336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 4522380795130854807}
   m_Father: {fileID: 7762782965937752166}
@@ -8468,6 +8585,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3804063333035574568}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &9192606397909738845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8520,7 +8640,7 @@ RectTransform:
   m_GameObject: {fileID: 6313281852753347996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3246410184424981091}
   m_Father: {fileID: 7762782965937752166}
@@ -8603,6 +8723,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 7635306984046441537}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &1798146667174749752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8880,7 +9003,7 @@ RectTransform:
   m_GameObject: {fileID: 6771756448378009351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 5926185123752068913}
   m_Father: {fileID: 7762782965937752166}
@@ -8963,6 +9086,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3167301841087463676}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4696057721600613506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9165,7 +9291,7 @@ RectTransform:
   m_GameObject: {fileID: 6855322550513340627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 6517641644006025039}
   m_Father: {fileID: 7762782965937752166}
@@ -9248,6 +9374,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 6167477898523589002}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &1442116902093124622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9375,7 +9504,7 @@ RectTransform:
   m_GameObject: {fileID: 6987438853505273201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3208441928586054796}
   m_Father: {fileID: 7762782965937752166}
@@ -9458,6 +9587,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 8250730944914456761}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &2994939560397325104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9585,7 +9717,7 @@ RectTransform:
   m_GameObject: {fileID: 7193495251623489038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3369251977082022899}
   m_Father: {fileID: 7762782965937752166}
@@ -9668,6 +9800,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 7349079869381170101}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &3880819272357351521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9720,7 +9855,7 @@ RectTransform:
   m_GameObject: {fileID: 7303528281107156572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 4764131074343584616}
   m_Father: {fileID: 7762782965937752166}
@@ -9803,6 +9938,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 7103991741623159468}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &7526530305986138139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9930,7 +10068,7 @@ RectTransform:
   m_GameObject: {fileID: 7382755724067904043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 5770908155319973050}
   m_Father: {fileID: 7762782965937752166}
@@ -10013,6 +10151,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 2263964891430455356}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &8329480728462710547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10140,7 +10281,7 @@ RectTransform:
   m_GameObject: {fileID: 7693678335077939592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 6036494426234352686}
   m_Father: {fileID: 7762782965937752166}
@@ -10223,6 +10364,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 1977993377950969945}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &418914692470178061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10425,7 +10569,7 @@ RectTransform:
   m_GameObject: {fileID: 8046070866374410210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 8133290419437243548}
   m_Father: {fileID: 7762782965937752166}
@@ -10508,6 +10652,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3963305481950404876}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &3161793147489882549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10560,7 +10707,7 @@ RectTransform:
   m_GameObject: {fileID: 8163734640111435067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 9218220267605433666}
   m_Father: {fileID: 7762782965937752166}
@@ -10643,6 +10790,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3306970162805733031}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &6905586479343433777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10845,7 +10995,7 @@ RectTransform:
   m_GameObject: {fileID: 8410614452876105830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 7946096832694810441}
   m_Father: {fileID: 7762782965937752166}
@@ -10928,6 +11078,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 6496640908535004409}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &8104666825777453225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10980,7 +11133,7 @@ RectTransform:
   m_GameObject: {fileID: 8428490641753568234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 137958479131644989}
   m_Father: {fileID: 7762782965937752166}
@@ -11063,6 +11216,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 6803809916960987102}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &6720490781315366101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11115,7 +11271,7 @@ RectTransform:
   m_GameObject: {fileID: 8575710406538704625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 3360103471499676084}
   m_Father: {fileID: 7762782965937752166}
@@ -11198,6 +11354,9 @@ MonoBehaviour:
   GetCardAmount: 3
   IsUsed: 0
   CardImg: {fileID: 8876013625785148288}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4013124961379024665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11325,7 +11484,7 @@ RectTransform:
   m_GameObject: {fileID: 8685370618755377291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 7835226167373369263}
   m_Father: {fileID: 7762782965937752166}
@@ -11408,6 +11567,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 9056107182568011588}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &9050046710868601102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11460,7 +11622,7 @@ RectTransform:
   m_GameObject: {fileID: 8802236988995268398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 299906392521536459}
   m_Father: {fileID: 7762782965937752166}
@@ -11543,6 +11705,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 2236602784946742369}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4902318809112285272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11670,7 +11835,7 @@ RectTransform:
   m_GameObject: {fileID: 8857951674656578560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 5205383143702253900}
   m_Father: {fileID: 7762782965937752166}
@@ -11753,6 +11918,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3885457329162229090}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &5132740055339256900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11955,7 +12123,7 @@ RectTransform:
   m_GameObject: {fileID: 8914830253385748893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 7540154221332316780}
   m_Father: {fileID: 7762782965937752166}
@@ -12038,6 +12206,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 3786776052772574198}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &7423691442092396447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12090,7 +12261,7 @@ RectTransform:
   m_GameObject: {fileID: 8945813943803021756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 7963625734907077249}
   m_Father: {fileID: 7762782965937752166}
@@ -12173,6 +12344,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 1582773212026015168}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &4336003404763224288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12225,7 +12399,7 @@ RectTransform:
   m_GameObject: {fileID: 8993634239078670027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 8756302620409093627}
   m_Father: {fileID: 7762782965937752166}
@@ -12308,6 +12482,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 1528419708587071726}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &8300583128026026220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12360,7 +12537,7 @@ RectTransform:
   m_GameObject: {fileID: 9001624086989079608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
   m_Children:
   - {fileID: 5667097770561855002}
   m_Father: {fileID: 7762782965937752166}
@@ -12443,6 +12620,9 @@ MonoBehaviour:
   GetCardAmount: 0
   IsUsed: 0
   CardImg: {fileID: 8031405008568232105}
+  OrginParent: {fileID: 0}
+  isDragging: 0
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &7320492864969396650
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -48,7 +48,9 @@ public class ShuffleCard : MonoBehaviour
             PlayerHand.name = "P"+p.ActorNumber.ToString();
             if(p.NickName == PhotonNetwork.NickName)
             {
+                
                 NetworkManager.networkManager.MyHand = PlayerHand.GetComponent<PlayerScript>().HandCanvas;
+                PlayerHand.GetComponent<PlayerScript>().IsMine = true;
             }
             else PlayerHand.transform.position = new Vector3(100,100,100);
             
