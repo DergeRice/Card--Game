@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3403107738562281537}
   - component: {fileID: 1637953163935165658}
   - component: {fileID: 7742506047180653166}
+  - component: {fileID: 4722108645747085052}
   m_Layer: 0
   m_Name: CardObj
   m_TagString: Untagged
@@ -115,7 +116,7 @@ MonoBehaviour:
   CardImg: {fileID: 3403107739227388802}
   OrginParent: {fileID: 0}
   isDragging: 0
-  Zoffset: 1
+  ScaleOffset: {x: 0, y: 0}
 --- !u!114 &7742506047180653166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +139,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &4722108645747085052
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3403107738562281551}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3403107739227388802
 GameObject:
   m_ObjectHideFlags: 0

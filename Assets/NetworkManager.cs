@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine.UI;
 using Photon;
 using Photon.Pun;
@@ -202,33 +204,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     }
     public static void LeaveRoomList()
     {
-        // if(PhotonNetwork.IsMasterClient)
-        // {
-        //     PhotonNetwork.SetMasterClient(PhotonNetwork.CurrentRoom.);
-        // }
-
-        //if(PhotonNetwork.InRoom) NetworkManager.JoinLobby();
         if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
-            // PhotonNetwork.CurrentRoom.IsOpen = false;
-            // PhotonNetwork.CurrentRoom.IsVisible = false;
-            // PhotonNetwork.DestroyPlayerObjects(PhotonNetwork.LocalPlayer);
-            //Debug.Log("문 닫고 나간다");
             MyRoomList.Remove(PhotonNetwork.CurrentRoom);
-            //PhotonNetwork.CurrentRoom.EmptyRoomTtl = 1;
-            //MyRoomList.Remove(PhotonNetwork.CurrentRoom);
         }
-        
         PhotonNetwork.LeaveRoom(true);
-        // NetworkManager.JoinLobby();
-        
-        //Debug.Log("나 나간다");
     }
 
     public override void OnLeftRoom()
     {
-       // NetworkManager.JoinLobby();
-        //OnRoomListUpdate(MyRoomList);
+
     }
 
     [PunRPC]
@@ -249,63 +234,100 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     {   
         if(stream.IsWriting)
         {
-            //stream.SendNext(PlayerNAME);
         }
         else 
         { 
-           // Debug.Log((string)stream.ReceiveNext());
-            // SetReady((string)stream.ReceiveNext()).GetComponent<Text>().text = "dd";
         }
-    }
-
-//     public class PlayerStat
-//     {
-//        public string PlayerName;
-//        public bool Ready;
-//     }
-    public static void StartGame()
-    {
-        // if(PhotonNetwork.roo)
-        // {
-        //     GameManager.StartGame();
-        // }
-        //GameManager.StartGame();
     }
 
     #region InGame
 
-    public void GiveCard(int CardNum,int PlayerNum)
+    public void GiveCard(int CardNum,int PlayerNum, int CardAmount)
     {
         if(PhotonNetwork.IsMasterClient)
         {
-            PV.RPC("SpreadCardInfo", RpcTarget.AllBuffered, CardNum, PlayerNum);
+            PV.RPC("SpreadCardInfo", RpcTarget.AllBuffered, CardNum, PlayerNum,CardAmount);
         }
+    }
+    public void GiveCardClient(int CardNum,int PlayerNum, int CardAmount)
+    {
+        PV.RPC("ClientGetCard", RpcTarget.AllBuffered, CardNum, PlayerNum,CardAmount);
+    }
+    
+    [PunRPC]
+    public void ClientGetCard(int CardNum,int PlayerNum, int CardAmount)
+    {
+        GiveCard(CardNum,PlayerNum,CardAmount);
+    }
+
+    public int GetMyPlayerNum()
+    {
+
+        for (int i = 0; i < PlayersHand.Count; i++)
+        {
+            if(PlayersHand[i].GetComponent<PlayerScript>().IsMine) return i;
+        }
+         
+        return -1;
+    
         
     }
 
-    [PunRPC]
-    public void SpawnCardDeck()
+    public void SetInitialFun(int PlayerNum)
     {
-        //cardDeck = Instantiate(CardDeck);
-        //cardDeck.name = "ThisGame";
-        //Debug.Log("Spawned");
+        PV.RPC("SetInitial", RpcTarget.AllBuffered,PlayerNum);
     }
 
     [PunRPC]
-    public void SpreadCardInfo(int CardNum,int PlayerNum)
+    public void SetInitial(int PlayerNum)
+    {
+        //if(PlayerNum == -1) return;
+        PlayersHand[PlayerNum].GetComponent<PlayerScript>().SetMyProfile(Random.Range(0,30)); //profile 설정
+    }
+    
+    [PunRPC]
+    public void SpreadCardInfo(int CardNum,int PlayerNum,int CardAmount)
+    {
+        if(PlayerNum == -1) return;
+        StartCoroutine(GiveCardCo(CardNum,PlayerNum,CardAmount));
+    }
+
+    IEnumerator GiveCardCo(int CardNum,int PlayerNum,int CardAmount)
     {
         GameObject CardDeck = GameObject.Find("CardDeck");
-        Debug.Log(CardNum+"/"+CardDeck.transform.childCount);
-        GameObject Card = CardDeck.transform.GetChild(CardNum).gameObject;
-        
-        Card.transform.parent = PlayersHand[PlayerNum].GetComponent<PlayerScript>().HandCanvas.transform;
-        Card.GetComponent<RectTransform>().localPosition = Vector3.zero;
-        Card.GetComponent<RectTransform>().localRotation = Quaternion.Euler(0,0,0);
-        //Card.transform.rotation = Quaternion.Euler(0,0,0);
-        Card.transform.localScale = new Vector3(2,2,2);
+        GameObject playerHand = PlayersHand[PlayerNum].GetComponent<PlayerScript>().HandCanvas;
+        //GameObject Card = CardDeck.transform.GetChild(CardNum).gameObject;
+        for (int i = 0; i < CardAmount; i++)
+        {
+            CardNum %= CardDeck.transform.childCount;
+            GameObject Card = CardDeck.transform.GetChild(CardNum).gameObject;
+
+            Card.GetComponent<CardScript>().PlayDrawAnimation();
+            yield return new WaitForSeconds(0.5f); // 1초 대기
+
+            
+            Card.transform.parent = playerHand.transform;
+            Card.GetComponent<RectTransform>().localPosition = Vector3.zero;
+            Card.GetComponent<RectTransform>().localRotation = Quaternion.Euler(Vector3.zero);
+            Card.transform.localScale = new Vector3(2, 2, 2);
+
+            CardNum++; // 다음 카드 번호로 이동
+        }
     }
 
 
     
     #endregion 
+}
+
+[InitializeOnLoad]
+public class EditorStartInit
+{
+    static EditorStartInit()
+    {
+        var pathOfFirstScene = EditorBuildSettings.scenes[0].path; // 씬 번호를 넣어주자.
+        var sceneAsset = AssetDatabase.LoadAssetAtPath<SceneAsset>(pathOfFirstScene);
+        EditorSceneManager.playModeStartScene = sceneAsset;
+        Debug.Log(pathOfFirstScene + " 씬이 에디터 플레이 모드 시작 씬으로 지정됨");
+    }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4017445923052781253}
   - component: {fileID: 7874233817950132577}
   - component: {fileID: 3213003416400441876}
+  - component: {fileID: 8365153617018013340}
   m_Layer: 0
   m_Name: Card25
   m_TagString: Untagged
@@ -30,7 +31,7 @@ RectTransform:
   m_GameObject: {fileID: 127956713345111354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1499527711606234781}
   m_Father: {fileID: 7762782965937752166}
@@ -112,6 +113,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 6528300350444578487}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -138,6 +142,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8365153617018013340
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127956713345111354}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &133746127808866723
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +243,7 @@ GameObject:
   - component: {fileID: 223494047644444840}
   - component: {fileID: 8122389876937362250}
   - component: {fileID: 6721823777919800245}
+  - component: {fileID: 4981861854805812834}
   m_Layer: 0
   m_Name: Card6
   m_TagString: Untagged
@@ -243,7 +260,7 @@ RectTransform:
   m_GameObject: {fileID: 172171472880373306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4259087998184644506}
   m_Father: {fileID: 7762782965937752166}
@@ -325,6 +342,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 655122499112268482}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -351,6 +371,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &4981861854805812834
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172171472880373306}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &244261916072353094
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +472,7 @@ GameObject:
   - component: {fileID: 5009405008310936435}
   - component: {fileID: 3973014351387689397}
   - component: {fileID: 5711181296775165825}
+  - component: {fileID: 5874192087928814929}
   m_Layer: 0
   m_Name: Card59
   m_TagString: Untagged
@@ -456,7 +489,7 @@ RectTransform:
   m_GameObject: {fileID: 417169761500056527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8738911888015369689}
   m_Father: {fileID: 7762782965937752166}
@@ -538,6 +571,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 8826344704482426093}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -564,6 +600,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &5874192087928814929
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417169761500056527}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &471382687911022608
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +626,7 @@ GameObject:
   - component: {fileID: 1454421375575371899}
   - component: {fileID: 3003521106068690239}
   - component: {fileID: 4033740414571230053}
+  - component: {fileID: 885558022431863371}
   m_Layer: 0
   m_Name: Card28
   m_TagString: Untagged
@@ -594,7 +643,7 @@ RectTransform:
   m_GameObject: {fileID: 471382687911022608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 881586379806711901}
   m_Father: {fileID: 7762782965937752166}
@@ -676,6 +725,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 5936253245032291457}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -702,6 +754,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &885558022431863371
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471382687911022608}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &484068509616577671
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +780,7 @@ GameObject:
   - component: {fileID: 5635138172849445578}
   - component: {fileID: 8049682188187646563}
   - component: {fileID: 8912270628555424351}
+  - component: {fileID: 4010678506216567469}
   m_Layer: 0
   m_Name: Card5
   m_TagString: Untagged
@@ -732,7 +797,7 @@ RectTransform:
   m_GameObject: {fileID: 484068509616577671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3310618750134514349}
   m_Father: {fileID: 7762782965937752166}
@@ -814,6 +879,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 244261916072353094}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -840,6 +908,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &4010678506216567469
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484068509616577671}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &486173270886513596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1234,7 @@ GameObject:
   - component: {fileID: 484395725721593869}
   - component: {fileID: 1033075188240562022}
   - component: {fileID: 4970565230983244844}
+  - component: {fileID: 7841522552198490874}
   m_Layer: 0
   m_Name: Card55
   m_TagString: Untagged
@@ -1170,7 +1251,7 @@ RectTransform:
   m_GameObject: {fileID: 856428647285924084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7868340317823151314}
   m_Father: {fileID: 7762782965937752166}
@@ -1252,6 +1333,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3639762271819660209}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -1278,6 +1362,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &7841522552198490874
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856428647285924084}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &902733240396548091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,6 +1538,7 @@ GameObject:
   - component: {fileID: 6174297675278895541}
   - component: {fileID: 4338809158806673655}
   - component: {fileID: 863565251999414702}
+  - component: {fileID: 7979551584976231043}
   m_Layer: 0
   m_Name: Card38
   m_TagString: Untagged
@@ -1458,7 +1555,7 @@ RectTransform:
   m_GameObject: {fileID: 1091880147477354684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 2606048016381264191}
   m_Father: {fileID: 7762782965937752166}
@@ -1540,6 +1637,9 @@ MonoBehaviour:
   SpecialCard: RO
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 9055293977736861447}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -1566,6 +1666,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &7979551584976231043
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091880147477354684}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1218925684444612451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,6 +1692,7 @@ GameObject:
   - component: {fileID: 8336614036861732285}
   - component: {fileID: 4345984154586738797}
   - component: {fileID: 8827874852694412200}
+  - component: {fileID: 5241739139161262382}
   m_Layer: 0
   m_Name: Card53
   m_TagString: Untagged
@@ -1596,7 +1709,7 @@ RectTransform:
   m_GameObject: {fileID: 1218925684444612451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3142285856528434054}
   m_Father: {fileID: 7762782965937752166}
@@ -1678,6 +1791,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3518682671737719888}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -1704,6 +1820,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &5241739139161262382
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218925684444612451}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1236372072658235071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,6 +1846,7 @@ GameObject:
   - component: {fileID: 6498055275445989280}
   - component: {fileID: 8268400230390024469}
   - component: {fileID: 1615486678525494097}
+  - component: {fileID: 8239215759129639723}
   m_Layer: 0
   m_Name: Card35
   m_TagString: Untagged
@@ -1734,7 +1863,7 @@ RectTransform:
   m_GameObject: {fileID: 1236372072658235071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8644207556488157341}
   m_Father: {fileID: 7762782965937752166}
@@ -1816,6 +1945,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 2649579086970955976}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -1842,6 +1974,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8239215759129639723
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236372072658235071}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1261557126707975274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,6 +2000,7 @@ GameObject:
   - component: {fileID: 4560603396087970932}
   - component: {fileID: 7040770824019377222}
   - component: {fileID: 3287363508555835050}
+  - component: {fileID: 8454202983233987255}
   m_Layer: 0
   m_Name: Card45
   m_TagString: Untagged
@@ -1872,7 +2017,7 @@ RectTransform:
   m_GameObject: {fileID: 1261557126707975274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 2062203182847784913}
   m_Father: {fileID: 7762782965937752166}
@@ -1954,6 +2099,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 5785358944367613645}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -1980,6 +2128,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8454202983233987255
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261557126707975274}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1290859616913240989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,6 +2154,7 @@ GameObject:
   - component: {fileID: 6521429036485200876}
   - component: {fileID: 1956929142030643212}
   - component: {fileID: 7290636798953614824}
+  - component: {fileID: 5677637641226782324}
   m_Layer: 0
   m_Name: Card7
   m_TagString: Untagged
@@ -2010,7 +2171,7 @@ RectTransform:
   m_GameObject: {fileID: 1290859616913240989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 2408489903758372646}
   m_Father: {fileID: 7762782965937752166}
@@ -2092,6 +2253,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 6102379518689018781}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -2118,6 +2282,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &5677637641226782324
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290859616913240989}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1417809430036263592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,6 +2308,7 @@ GameObject:
   - component: {fileID: 1871715297961325748}
   - component: {fileID: 4272253117836340320}
   - component: {fileID: 1424411956575015544}
+  - component: {fileID: 8335259392345151884}
   m_Layer: 0
   m_Name: Card54
   m_TagString: Untagged
@@ -2148,7 +2325,7 @@ RectTransform:
   m_GameObject: {fileID: 1417809430036263592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3728949646453693743}
   m_Father: {fileID: 7762782965937752166}
@@ -2230,6 +2407,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 5108347287763261915}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -2256,6 +2436,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8335259392345151884
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417809430036263592}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1528419708587071726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2735,6 +2927,7 @@ GameObject:
   - component: {fileID: 469522402201795912}
   - component: {fileID: 9061443001242580655}
   - component: {fileID: 5728669645267787573}
+  - component: {fileID: 3228302496646707209}
   m_Layer: 0
   m_Name: Card8
   m_TagString: Untagged
@@ -2751,7 +2944,7 @@ RectTransform:
   m_GameObject: {fileID: 1897948107943088591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1056307871963800318}
   m_Father: {fileID: 7762782965937752166}
@@ -2833,6 +3026,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3581544652709305717}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -2859,6 +3055,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &3228302496646707209
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897948107943088591}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1977993377950969945
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,6 +3156,7 @@ GameObject:
   - component: {fileID: 1476416776255533802}
   - component: {fileID: 993943582412897436}
   - component: {fileID: 8265618822842279960}
+  - component: {fileID: 1490420009348078331}
   m_Layer: 0
   m_Name: Card11
   m_TagString: Untagged
@@ -2964,7 +3173,7 @@ RectTransform:
   m_GameObject: {fileID: 2051147388812267737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 5064171423605176044}
   m_Father: {fileID: 7762782965937752166}
@@ -3046,6 +3255,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 7838503261352984375}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -3072,6 +3284,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &1490420009348078331
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051147388812267737}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2126596894398555170
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,6 +3310,7 @@ GameObject:
   - component: {fileID: 6154927657222869018}
   - component: {fileID: 5496901337482137875}
   - component: {fileID: 109363228648224428}
+  - component: {fileID: 3905385151572743613}
   m_Layer: 0
   m_Name: Card30
   m_TagString: Untagged
@@ -3102,7 +3327,7 @@ RectTransform:
   m_GameObject: {fileID: 2126596894398555170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3777247837900607122}
   m_Father: {fileID: 7762782965937752166}
@@ -3184,6 +3409,9 @@ MonoBehaviour:
   SpecialCard: GET
   GetCardAmount: 2
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 6955805913915592490}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -3210,6 +3438,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &3905385151572743613
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126596894398555170}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2236602784946742369
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,6 +3614,7 @@ GameObject:
   - component: {fileID: 9129648590460369672}
   - component: {fileID: 6392103135682019363}
   - component: {fileID: 509302817910899367}
+  - component: {fileID: 7213955650653557145}
   m_Layer: 0
   m_Name: Card51
   m_TagString: Untagged
@@ -3390,7 +3631,7 @@ RectTransform:
   m_GameObject: {fileID: 2314579571745119804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1274834872918723963}
   m_Father: {fileID: 7762782965937752166}
@@ -3472,6 +3713,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 1880149946094425299}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -3498,6 +3742,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &7213955650653557145
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314579571745119804}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2354321782606197994
 GameObject:
   m_ObjectHideFlags: 0
@@ -3512,6 +3768,7 @@ GameObject:
   - component: {fileID: 2232861623916382744}
   - component: {fileID: 7666822640519441680}
   - component: {fileID: 6317448003302192667}
+  - component: {fileID: 1194894059913940186}
   m_Layer: 0
   m_Name: Card24
   m_TagString: Untagged
@@ -3528,7 +3785,7 @@ RectTransform:
   m_GameObject: {fileID: 2354321782606197994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3571737061364203753}
   m_Father: {fileID: 7762782965937752166}
@@ -3610,6 +3867,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 133746127808866723}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -3636,6 +3896,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &1194894059913940186
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354321782606197994}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2418100153885311345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3650,6 +3922,7 @@ GameObject:
   - component: {fileID: 6196387717143032090}
   - component: {fileID: 2300425873055039091}
   - component: {fileID: 664745285509933516}
+  - component: {fileID: 3149655505814694706}
   m_Layer: 0
   m_Name: Card27
   m_TagString: Untagged
@@ -3666,7 +3939,7 @@ RectTransform:
   m_GameObject: {fileID: 2418100153885311345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4570474112656812757}
   m_Father: {fileID: 7762782965937752166}
@@ -3748,6 +4021,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 5328738112013252607}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -3774,6 +4050,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &3149655505814694706
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2418100153885311345}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2468906158667401248
 GameObject:
   m_ObjectHideFlags: 0
@@ -3788,6 +4076,7 @@ GameObject:
   - component: {fileID: 7544519307403953861}
   - component: {fileID: 650586217657193772}
   - component: {fileID: 4313720195906667961}
+  - component: {fileID: 6821680161997942954}
   m_Layer: 0
   m_Name: Card29
   m_TagString: Untagged
@@ -3804,7 +4093,7 @@ RectTransform:
   m_GameObject: {fileID: 2468906158667401248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3160308554889768173}
   m_Father: {fileID: 7762782965937752166}
@@ -3886,6 +4175,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 8251509040352003337}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -3912,6 +4204,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &6821680161997942954
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2468906158667401248}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2506013271010636553
 GameObject:
   m_ObjectHideFlags: 0
@@ -3926,6 +4230,7 @@ GameObject:
   - component: {fileID: 8163985816262227532}
   - component: {fileID: 8968194676886547916}
   - component: {fileID: 2012690750386984949}
+  - component: {fileID: 8120002497957907832}
   m_Layer: 0
   m_Name: Card33
   m_TagString: Untagged
@@ -3942,7 +4247,7 @@ RectTransform:
   m_GameObject: {fileID: 2506013271010636553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3032158415187162827}
   m_Father: {fileID: 7762782965937752166}
@@ -4024,6 +4329,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3803825602038435107}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -4050,6 +4358,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8120002497957907832
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506013271010636553}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2513587268519509223
 GameObject:
   m_ObjectHideFlags: 0
@@ -4064,6 +4384,7 @@ GameObject:
   - component: {fileID: 5284436955466910316}
   - component: {fileID: 7090345684275205261}
   - component: {fileID: 2046369284978040271}
+  - component: {fileID: 7110892685474479572}
   m_Layer: 0
   m_Name: Card13
   m_TagString: Untagged
@@ -4080,7 +4401,7 @@ RectTransform:
   m_GameObject: {fileID: 2513587268519509223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 6325518754391585368}
   m_Father: {fileID: 7762782965937752166}
@@ -4162,6 +4483,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 825356692590160534}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -4188,6 +4512,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &7110892685474479572
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2513587268519509223}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2530007590820621087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4202,6 +4538,7 @@ GameObject:
   - component: {fileID: 6201788817808124757}
   - component: {fileID: 2487030045920402625}
   - component: {fileID: 4571663195853303820}
+  - component: {fileID: 5885419549609160918}
   m_Layer: 0
   m_Name: Card26
   m_TagString: Untagged
@@ -4218,7 +4555,7 @@ RectTransform:
   m_GameObject: {fileID: 2530007590820621087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7134765398677232488}
   m_Father: {fileID: 7762782965937752166}
@@ -4300,6 +4637,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 5334967430952826888}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -4326,6 +4666,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &5885419549609160918
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2530007590820621087}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2560640289237854972
 GameObject:
   m_ObjectHideFlags: 0
@@ -4340,6 +4692,7 @@ GameObject:
   - component: {fileID: 5391451168340695621}
   - component: {fileID: 1896600931903764179}
   - component: {fileID: 7062930297983558232}
+  - component: {fileID: 2138165397515529026}
   m_Layer: 0
   m_Name: Card21
   m_TagString: Untagged
@@ -4356,7 +4709,7 @@ RectTransform:
   m_GameObject: {fileID: 2560640289237854972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 5273885659606717900}
   m_Father: {fileID: 7762782965937752166}
@@ -4438,6 +4791,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 6259005533768907449}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -4464,6 +4820,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &2138165397515529026
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2560640289237854972}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2649579086970955976
 GameObject:
   m_ObjectHideFlags: 0
@@ -4628,6 +4996,7 @@ GameObject:
   - component: {fileID: 1584171012987810521}
   - component: {fileID: 31978787933101180}
   - component: {fileID: 3659626048666446650}
+  - component: {fileID: 2037052572066210310}
   m_Layer: 0
   m_Name: Card34
   m_TagString: Untagged
@@ -4644,7 +5013,7 @@ RectTransform:
   m_GameObject: {fileID: 2958655950062984195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 580089363017126003}
   m_Father: {fileID: 7762782965937752166}
@@ -4726,6 +5095,9 @@ MonoBehaviour:
   SpecialCard: PR
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 9051923367509065188}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -4752,6 +5124,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &2037052572066210310
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2958655950062984195}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3144364966502711034
 GameObject:
   m_ObjectHideFlags: 0
@@ -4766,6 +5150,7 @@ GameObject:
   - component: {fileID: 7415637216730224044}
   - component: {fileID: 8523417510335385884}
   - component: {fileID: 2645545442124386015}
+  - component: {fileID: 4280531546359731670}
   m_Layer: 0
   m_Name: Card10
   m_TagString: Untagged
@@ -4782,7 +5167,7 @@ RectTransform:
   m_GameObject: {fileID: 3144364966502711034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3435904107601917704}
   m_Father: {fileID: 7762782965937752166}
@@ -4864,6 +5249,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 2780928077510133989}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -4890,6 +5278,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &4280531546359731670
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3144364966502711034}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3167301841087463676
 GameObject:
   m_ObjectHideFlags: 0
@@ -4979,6 +5379,7 @@ GameObject:
   - component: {fileID: 3526246803599764102}
   - component: {fileID: 4731035114846597600}
   - component: {fileID: 4395593346414049888}
+  - component: {fileID: 3433838010740742537}
   m_Layer: 0
   m_Name: Card39
   m_TagString: Untagged
@@ -4995,7 +5396,7 @@ RectTransform:
   m_GameObject: {fileID: 3204951778547705538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 9065947927463204155}
   m_Father: {fileID: 7762782965937752166}
@@ -5077,6 +5478,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 1704393721680318890}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -5103,6 +5507,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &3433838010740742537
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3204951778547705538}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3306970162805733031
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,6 +5683,7 @@ GameObject:
   - component: {fileID: 4174058924405758925}
   - component: {fileID: 8693101297773200122}
   - component: {fileID: 5916797682848876249}
+  - component: {fileID: 4047411911275389940}
   m_Layer: 0
   m_Name: Card40
   m_TagString: Untagged
@@ -5283,7 +5700,7 @@ RectTransform:
   m_GameObject: {fileID: 3532812825795930257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 2436698941778675498}
   m_Father: {fileID: 7762782965937752166}
@@ -5365,6 +5782,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 486173270886513596}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -5391,6 +5811,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &4047411911275389940
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532812825795930257}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3581544652709305717
 GameObject:
   m_ObjectHideFlags: 0
@@ -5480,6 +5912,7 @@ GameObject:
   - component: {fileID: 7120421147710990803}
   - component: {fileID: 546524443802278565}
   - component: {fileID: 7050915140332448943}
+  - component: {fileID: 1975487838775216545}
   m_Layer: 0
   m_Name: Card56
   m_TagString: Untagged
@@ -5496,7 +5929,7 @@ RectTransform:
   m_GameObject: {fileID: 3616443045903793540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4688329826770014906}
   m_Father: {fileID: 7762782965937752166}
@@ -5578,6 +6011,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 5937938600945041769}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -5604,6 +6040,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &1975487838775216545
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3616443045903793540}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3639762271819660209
 GameObject:
   m_ObjectHideFlags: 0
@@ -5993,6 +6441,7 @@ GameObject:
   - component: {fileID: 4826717726145084956}
   - component: {fileID: 8611564624537146077}
   - component: {fileID: 8695419771462337185}
+  - component: {fileID: 5540810814616572148}
   m_Layer: 0
   m_Name: Card44
   m_TagString: Untagged
@@ -6009,7 +6458,7 @@ RectTransform:
   m_GameObject: {fileID: 3838221485114040648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8870793357396367495}
   m_Father: {fileID: 7762782965937752166}
@@ -6091,6 +6540,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 6840537677450482812}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -6117,6 +6569,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &5540810814616572148
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3838221485114040648}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3885457329162229090
 GameObject:
   m_ObjectHideFlags: 0
@@ -6356,6 +6820,7 @@ GameObject:
   - component: {fileID: 6080106731730502545}
   - component: {fileID: 133928906777514785}
   - component: {fileID: 4761465849734218414}
+  - component: {fileID: 1357515851975189902}
   m_Layer: 0
   m_Name: Card47
   m_TagString: Untagged
@@ -6372,7 +6837,7 @@ RectTransform:
   m_GameObject: {fileID: 4863116375631234901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 2403945211253205849}
   m_Father: {fileID: 7762782965937752166}
@@ -6454,6 +6919,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 6410508180280171357}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -6480,6 +6948,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &1357515851975189902
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4863116375631234901}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4928706250652360382
 GameObject:
   m_ObjectHideFlags: 0
@@ -6494,6 +6974,7 @@ GameObject:
   - component: {fileID: 9105113584185983865}
   - component: {fileID: 9188300595092121462}
   - component: {fileID: 280930468033101131}
+  - component: {fileID: 7070512725604481283}
   m_Layer: 0
   m_Name: Card1
   m_TagString: Untagged
@@ -6510,7 +6991,7 @@ RectTransform:
   m_GameObject: {fileID: 4928706250652360382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 764999850812489586}
   m_Father: {fileID: 7762782965937752166}
@@ -6592,6 +7073,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 6151938010596154507}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -6618,6 +7102,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &7070512725604481283
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928706250652360382}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4936247476124304764
 GameObject:
   m_ObjectHideFlags: 0
@@ -6632,6 +7128,7 @@ GameObject:
   - component: {fileID: 5323203738580707590}
   - component: {fileID: 688577501576217666}
   - component: {fileID: 5954491476050883448}
+  - component: {fileID: 825752269291469492}
   m_Layer: 0
   m_Name: Card31
   m_TagString: Untagged
@@ -6648,7 +7145,7 @@ RectTransform:
   m_GameObject: {fileID: 4936247476124304764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7990240668229826138}
   m_Father: {fileID: 7762782965937752166}
@@ -6730,6 +7227,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 8891038104653426678}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -6756,6 +7256,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &825752269291469492
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936247476124304764}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5108347287763261915
 GameObject:
   m_ObjectHideFlags: 0
@@ -6995,6 +7507,7 @@ GameObject:
   - component: {fileID: 6607535824223155313}
   - component: {fileID: 6259150067505210598}
   - component: {fileID: 4577979640103314694}
+  - component: {fileID: 5962797265415719779}
   m_Layer: 0
   m_Name: Card4
   m_TagString: Untagged
@@ -7011,7 +7524,7 @@ RectTransform:
   m_GameObject: {fileID: 5381353069187334653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1527304430197831932}
   m_Father: {fileID: 7762782965937752166}
@@ -7093,6 +7606,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 902733240396548091}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -7119,6 +7635,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &5962797265415719779
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381353069187334653}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5498891325594000931
 GameObject:
   m_ObjectHideFlags: 0
@@ -7133,6 +7661,7 @@ GameObject:
   - component: {fileID: 3726707368348257164}
   - component: {fileID: 1834475621450663659}
   - component: {fileID: 4175320578033139112}
+  - component: {fileID: 146926787755125355}
   m_Layer: 0
   m_Name: Card22
   m_TagString: Untagged
@@ -7149,7 +7678,7 @@ RectTransform:
   m_GameObject: {fileID: 5498891325594000931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7316055296107695842}
   m_Father: {fileID: 7762782965937752166}
@@ -7231,6 +7760,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 1595179543335645798}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -7257,6 +7789,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &146926787755125355
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498891325594000931}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5678864119556230260
 GameObject:
   m_ObjectHideFlags: 0
@@ -7271,6 +7815,7 @@ GameObject:
   - component: {fileID: 7703741554174599665}
   - component: {fileID: 9136547492298926573}
   - component: {fileID: 4917364560381656540}
+  - component: {fileID: 8007759627799763881}
   m_Layer: 0
   m_Name: Card23
   m_TagString: Untagged
@@ -7287,7 +7832,7 @@ RectTransform:
   m_GameObject: {fileID: 5678864119556230260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8616719279340365300}
   m_Father: {fileID: 7762782965937752166}
@@ -7369,6 +7914,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 1009349476825597932}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -7395,6 +7943,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8007759627799763881
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5678864119556230260}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5772275447058070710
 GameObject:
   m_ObjectHideFlags: 0
@@ -7409,6 +7969,7 @@ GameObject:
   - component: {fileID: 4106747170052796387}
   - component: {fileID: 8200444200691474658}
   - component: {fileID: 3949902839146842106}
+  - component: {fileID: 8664605430269941756}
   m_Layer: 0
   m_Name: Card32
   m_TagString: Untagged
@@ -7425,7 +7986,7 @@ RectTransform:
   m_GameObject: {fileID: 5772275447058070710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4327982595399539986}
   m_Father: {fileID: 7762782965937752166}
@@ -7507,6 +8068,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 8597758577367406183}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -7533,6 +8097,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8664605430269941756
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5772275447058070710}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5785358944367613645
 GameObject:
   m_ObjectHideFlags: 0
@@ -7622,6 +8198,7 @@ GameObject:
   - component: {fileID: 8249538220373300608}
   - component: {fileID: 3519084064500129550}
   - component: {fileID: 6688223664422940211}
+  - component: {fileID: 1167946649065343039}
   m_Layer: 0
   m_Name: Card12
   m_TagString: Untagged
@@ -7638,7 +8215,7 @@ RectTransform:
   m_GameObject: {fileID: 5786157265365942710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1122363335951229878}
   m_Father: {fileID: 7762782965937752166}
@@ -7720,6 +8297,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3674084355588472319}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -7746,6 +8326,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &1167946649065343039
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5786157265365942710}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5936253245032291457
 GameObject:
   m_ObjectHideFlags: 0
@@ -7910,6 +8502,7 @@ GameObject:
   - component: {fileID: 8528987486401818502}
   - component: {fileID: 5453037215521913161}
   - component: {fileID: 6633634705168131270}
+  - component: {fileID: 4185554372699475039}
   m_Layer: 0
   m_Name: Card49
   m_TagString: Untagged
@@ -7926,7 +8519,7 @@ RectTransform:
   m_GameObject: {fileID: 5982157263139781337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3782034398731413410}
   m_Father: {fileID: 7762782965937752166}
@@ -8008,6 +8601,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 617656571407161931}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -8034,6 +8630,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &4185554372699475039
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5982157263139781337}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6028012937746797225
 GameObject:
   m_ObjectHideFlags: 0
@@ -8048,6 +8656,7 @@ GameObject:
   - component: {fileID: 3491934412088965337}
   - component: {fileID: 6951170945727546015}
   - component: {fileID: 8020506810525842931}
+  - component: {fileID: 8464621142227332147}
   m_Layer: 0
   m_Name: Card37
   m_TagString: Untagged
@@ -8064,7 +8673,7 @@ RectTransform:
   m_GameObject: {fileID: 6028012937746797225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8326848595604210377}
   m_Father: {fileID: 7762782965937752166}
@@ -8146,6 +8755,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 4862917297487487182}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -8172,6 +8784,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8464621142227332147
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6028012937746797225}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6102379518689018781
 GameObject:
   m_ObjectHideFlags: 0
@@ -8486,6 +9110,7 @@ GameObject:
   - component: {fileID: 2774998734916964869}
   - component: {fileID: 5260428902699229801}
   - component: {fileID: 9192606397909738845}
+  - component: {fileID: 7449902196332462134}
   m_Layer: 0
   m_Name: Card15
   m_TagString: Untagged
@@ -8502,7 +9127,7 @@ RectTransform:
   m_GameObject: {fileID: 6283521663722955336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4522380795130854807}
   m_Father: {fileID: 7762782965937752166}
@@ -8584,6 +9209,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3804063333035574568}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -8610,6 +9238,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &7449902196332462134
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6283521663722955336}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6313281852753347996
 GameObject:
   m_ObjectHideFlags: 0
@@ -8624,6 +9264,7 @@ GameObject:
   - component: {fileID: 2801054285508995673}
   - component: {fileID: 3753572077332288331}
   - component: {fileID: 1798146667174749752}
+  - component: {fileID: 4418612070211262030}
   m_Layer: 0
   m_Name: Card58
   m_TagString: Untagged
@@ -8640,7 +9281,7 @@ RectTransform:
   m_GameObject: {fileID: 6313281852753347996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3246410184424981091}
   m_Father: {fileID: 7762782965937752166}
@@ -8722,6 +9363,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 7635306984046441537}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -8748,6 +9392,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &4418612070211262030
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313281852753347996}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6410508180280171357
 GameObject:
   m_ObjectHideFlags: 0
@@ -8987,6 +9643,7 @@ GameObject:
   - component: {fileID: 8543443415401693475}
   - component: {fileID: 944139342036221385}
   - component: {fileID: 4696057721600613506}
+  - component: {fileID: 5966440754677652300}
   m_Layer: 0
   m_Name: Card36
   m_TagString: Untagged
@@ -9003,7 +9660,7 @@ RectTransform:
   m_GameObject: {fileID: 6771756448378009351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 5926185123752068913}
   m_Father: {fileID: 7762782965937752166}
@@ -9085,6 +9742,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3167301841087463676}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -9111,6 +9771,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &5966440754677652300
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6771756448378009351}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6803809916960987102
 GameObject:
   m_ObjectHideFlags: 0
@@ -9275,6 +9947,7 @@ GameObject:
   - component: {fileID: 3370755249998210413}
   - component: {fileID: 6458344878516473534}
   - component: {fileID: 1442116902093124622}
+  - component: {fileID: 1827574935275715377}
   m_Layer: 0
   m_Name: Card3
   m_TagString: Untagged
@@ -9291,7 +9964,7 @@ RectTransform:
   m_GameObject: {fileID: 6855322550513340627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 6517641644006025039}
   m_Father: {fileID: 7762782965937752166}
@@ -9373,6 +10046,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 6167477898523589002}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -9399,6 +10075,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &1827574935275715377
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855322550513340627}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6955805913915592490
 GameObject:
   m_ObjectHideFlags: 0
@@ -9488,6 +10176,7 @@ GameObject:
   - component: {fileID: 6244384330105035983}
   - component: {fileID: 7202248034954622874}
   - component: {fileID: 2994939560397325104}
+  - component: {fileID: 451891780515739707}
   m_Layer: 0
   m_Name: Card48
   m_TagString: Untagged
@@ -9504,7 +10193,7 @@ RectTransform:
   m_GameObject: {fileID: 6987438853505273201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3208441928586054796}
   m_Father: {fileID: 7762782965937752166}
@@ -9586,6 +10275,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 8250730944914456761}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -9612,6 +10304,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &451891780515739707
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6987438853505273201}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7103991741623159468
 GameObject:
   m_ObjectHideFlags: 0
@@ -9701,6 +10405,7 @@ GameObject:
   - component: {fileID: 692669102251648780}
   - component: {fileID: 8435480656804313828}
   - component: {fileID: 3880819272357351521}
+  - component: {fileID: 8151432350871078635}
   m_Layer: 0
   m_Name: Card57
   m_TagString: Untagged
@@ -9717,7 +10422,7 @@ RectTransform:
   m_GameObject: {fileID: 7193495251623489038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3369251977082022899}
   m_Father: {fileID: 7762782965937752166}
@@ -9799,6 +10504,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 7349079869381170101}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -9825,6 +10533,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8151432350871078635
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193495251623489038}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7303528281107156572
 GameObject:
   m_ObjectHideFlags: 0
@@ -9839,6 +10559,7 @@ GameObject:
   - component: {fileID: 1380992020108244588}
   - component: {fileID: 1053418093134456704}
   - component: {fileID: 7526530305986138139}
+  - component: {fileID: 8897322614907264752}
   m_Layer: 0
   m_Name: Card41
   m_TagString: Untagged
@@ -9855,7 +10576,7 @@ RectTransform:
   m_GameObject: {fileID: 7303528281107156572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4764131074343584616}
   m_Father: {fileID: 7762782965937752166}
@@ -9937,6 +10658,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 7103991741623159468}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -9963,6 +10687,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8897322614907264752
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7303528281107156572}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7349079869381170101
 GameObject:
   m_ObjectHideFlags: 0
@@ -10052,6 +10788,7 @@ GameObject:
   - component: {fileID: 4338758737154690211}
   - component: {fileID: 7167028868297031118}
   - component: {fileID: 8329480728462710547}
+  - component: {fileID: 6560729501783073454}
   m_Layer: 0
   m_Name: Card42
   m_TagString: Untagged
@@ -10068,7 +10805,7 @@ RectTransform:
   m_GameObject: {fileID: 7382755724067904043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 5770908155319973050}
   m_Father: {fileID: 7762782965937752166}
@@ -10150,6 +10887,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 2263964891430455356}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -10176,6 +10916,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &6560729501783073454
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7382755724067904043}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7635306984046441537
 GameObject:
   m_ObjectHideFlags: 0
@@ -10265,6 +11017,7 @@ GameObject:
   - component: {fileID: 5960818851568586625}
   - component: {fileID: 3001978239005103662}
   - component: {fileID: 418914692470178061}
+  - component: {fileID: 2473894576131128858}
   m_Layer: 0
   m_Name: Card9
   m_TagString: Untagged
@@ -10281,7 +11034,7 @@ RectTransform:
   m_GameObject: {fileID: 7693678335077939592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 6036494426234352686}
   m_Father: {fileID: 7762782965937752166}
@@ -10363,6 +11116,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 1977993377950969945}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -10389,6 +11145,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &2473894576131128858
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693678335077939592}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7838503261352984375
 GameObject:
   m_ObjectHideFlags: 0
@@ -10553,6 +11321,7 @@ GameObject:
   - component: {fileID: 6839751863283813038}
   - component: {fileID: 2879542643694002712}
   - component: {fileID: 3161793147489882549}
+  - component: {fileID: 7464294326799153663}
   m_Layer: 0
   m_Name: Card2
   m_TagString: Untagged
@@ -10569,7 +11338,7 @@ RectTransform:
   m_GameObject: {fileID: 8046070866374410210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8133290419437243548}
   m_Father: {fileID: 7762782965937752166}
@@ -10651,6 +11420,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3963305481950404876}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -10677,6 +11449,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &7464294326799153663
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8046070866374410210}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8163734640111435067
 GameObject:
   m_ObjectHideFlags: 0
@@ -10691,6 +11475,7 @@ GameObject:
   - component: {fileID: 352194437176975786}
   - component: {fileID: 3200174030214428692}
   - component: {fileID: 6905586479343433777}
+  - component: {fileID: 6209024636478207510}
   m_Layer: 0
   m_Name: Card18
   m_TagString: Untagged
@@ -10707,7 +11492,7 @@ RectTransform:
   m_GameObject: {fileID: 8163734640111435067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 9218220267605433666}
   m_Father: {fileID: 7762782965937752166}
@@ -10789,6 +11574,9 @@ MonoBehaviour:
   SpecialCard: EX
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3306970162805733031}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -10815,6 +11603,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &6209024636478207510
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8163734640111435067}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8250730944914456761
 GameObject:
   m_ObjectHideFlags: 0
@@ -10979,6 +11779,7 @@ GameObject:
   - component: {fileID: 330570638261876305}
   - component: {fileID: 2930406067143310556}
   - component: {fileID: 8104666825777453225}
+  - component: {fileID: 4713678641124129750}
   m_Layer: 0
   m_Name: Card46
   m_TagString: Untagged
@@ -10995,7 +11796,7 @@ RectTransform:
   m_GameObject: {fileID: 8410614452876105830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7946096832694810441}
   m_Father: {fileID: 7762782965937752166}
@@ -11077,6 +11878,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 6496640908535004409}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -11103,6 +11907,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &4713678641124129750
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8410614452876105830}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8428490641753568234
 GameObject:
   m_ObjectHideFlags: 0
@@ -11117,6 +11933,7 @@ GameObject:
   - component: {fileID: 3284691945752841698}
   - component: {fileID: 320410018586833515}
   - component: {fileID: 6720490781315366101}
+  - component: {fileID: 5121370003347346821}
   m_Layer: 0
   m_Name: Card52
   m_TagString: Untagged
@@ -11133,7 +11950,7 @@ RectTransform:
   m_GameObject: {fileID: 8428490641753568234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 137958479131644989}
   m_Father: {fileID: 7762782965937752166}
@@ -11215,6 +12032,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 6803809916960987102}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -11241,6 +12061,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &5121370003347346821
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428490641753568234}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8575710406538704625
 GameObject:
   m_ObjectHideFlags: 0
@@ -11255,6 +12087,7 @@ GameObject:
   - component: {fileID: 719933803097014757}
   - component: {fileID: 4337706630773163036}
   - component: {fileID: 4013124961379024665}
+  - component: {fileID: 857171933311367558}
   m_Layer: 0
   m_Name: Card43
   m_TagString: Untagged
@@ -11271,7 +12104,7 @@ RectTransform:
   m_GameObject: {fileID: 8575710406538704625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3360103471499676084}
   m_Father: {fileID: 7762782965937752166}
@@ -11353,6 +12186,9 @@ MonoBehaviour:
   SpecialCard: GET
   GetCardAmount: 3
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 8876013625785148288}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -11379,6 +12215,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &857171933311367558
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8575710406538704625}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8597758577367406183
 GameObject:
   m_ObjectHideFlags: 0
@@ -11468,6 +12316,7 @@ GameObject:
   - component: {fileID: 6843722293159842646}
   - component: {fileID: 5178604001624067484}
   - component: {fileID: 9050046710868601102}
+  - component: {fileID: 5919188530422182096}
   m_Layer: 0
   m_Name: Card14
   m_TagString: Untagged
@@ -11484,7 +12333,7 @@ RectTransform:
   m_GameObject: {fileID: 8685370618755377291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7835226167373369263}
   m_Father: {fileID: 7762782965937752166}
@@ -11566,6 +12415,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 9056107182568011588}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -11592,6 +12444,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &5919188530422182096
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8685370618755377291}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8802236988995268398
 GameObject:
   m_ObjectHideFlags: 0
@@ -11606,6 +12470,7 @@ GameObject:
   - component: {fileID: 5882055555704348188}
   - component: {fileID: 3179940266905735920}
   - component: {fileID: 4902318809112285272}
+  - component: {fileID: 699207938771630599}
   m_Layer: 0
   m_Name: Card50
   m_TagString: Untagged
@@ -11622,7 +12487,7 @@ RectTransform:
   m_GameObject: {fileID: 8802236988995268398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 299906392521536459}
   m_Father: {fileID: 7762782965937752166}
@@ -11704,6 +12569,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 2236602784946742369}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -11730,6 +12598,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &699207938771630599
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802236988995268398}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8826344704482426093
 GameObject:
   m_ObjectHideFlags: 0
@@ -11819,6 +12699,7 @@ GameObject:
   - component: {fileID: 4255396210529521534}
   - component: {fileID: 7886455516499398227}
   - component: {fileID: 5132740055339256900}
+  - component: {fileID: 573934179277754102}
   m_Layer: 0
   m_Name: Card20
   m_TagString: Untagged
@@ -11835,7 +12716,7 @@ RectTransform:
   m_GameObject: {fileID: 8857951674656578560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 5205383143702253900}
   m_Father: {fileID: 7762782965937752166}
@@ -11917,6 +12798,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3885457329162229090}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -11943,6 +12827,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &573934179277754102
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857951674656578560}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8876013625785148288
 GameObject:
   m_ObjectHideFlags: 0
@@ -12107,6 +13003,7 @@ GameObject:
   - component: {fileID: 2074417076189342787}
   - component: {fileID: 512966303903355540}
   - component: {fileID: 7423691442092396447}
+  - component: {fileID: 8999942076509994782}
   m_Layer: 0
   m_Name: Card16
   m_TagString: Untagged
@@ -12123,7 +13020,7 @@ RectTransform:
   m_GameObject: {fileID: 8914830253385748893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7540154221332316780}
   m_Father: {fileID: 7762782965937752166}
@@ -12205,6 +13102,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 3786776052772574198}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -12231,6 +13131,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8999942076509994782
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8914830253385748893}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8945813943803021756
 GameObject:
   m_ObjectHideFlags: 0
@@ -12245,6 +13157,7 @@ GameObject:
   - component: {fileID: 5078768803230885351}
   - component: {fileID: 2112958830970163343}
   - component: {fileID: 4336003404763224288}
+  - component: {fileID: 8782195130913572641}
   m_Layer: 0
   m_Name: Card19
   m_TagString: Untagged
@@ -12261,7 +13174,7 @@ RectTransform:
   m_GameObject: {fileID: 8945813943803021756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7963625734907077249}
   m_Father: {fileID: 7762782965937752166}
@@ -12343,6 +13256,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 1582773212026015168}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -12369,6 +13285,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8782195130913572641
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945813943803021756}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8993634239078670027
 GameObject:
   m_ObjectHideFlags: 0
@@ -12383,6 +13311,7 @@ GameObject:
   - component: {fileID: 4679453796980317647}
   - component: {fileID: 3686213172975687431}
   - component: {fileID: 8300583128026026220}
+  - component: {fileID: 1915162411126511801}
   m_Layer: 0
   m_Name: Card0
   m_TagString: Untagged
@@ -12399,7 +13328,7 @@ RectTransform:
   m_GameObject: {fileID: 8993634239078670027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8756302620409093627}
   m_Father: {fileID: 7762782965937752166}
@@ -12481,6 +13410,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 1528419708587071726}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -12507,6 +13439,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &1915162411126511801
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993634239078670027}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &9001624086989079608
 GameObject:
   m_ObjectHideFlags: 0
@@ -12521,6 +13465,7 @@ GameObject:
   - component: {fileID: 4393844156835551110}
   - component: {fileID: 7936360190982369386}
   - component: {fileID: 7320492864969396650}
+  - component: {fileID: 8688146149334097136}
   m_Layer: 0
   m_Name: Card17
   m_TagString: Untagged
@@ -12537,7 +13482,7 @@ RectTransform:
   m_GameObject: {fileID: 9001624086989079608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006897559, y: 0.009196746, z: 0.006897559}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 5667097770561855002}
   m_Father: {fileID: 7762782965937752166}
@@ -12619,6 +13564,9 @@ MonoBehaviour:
   SpecialCard: 
   GetCardAmount: 0
   IsUsed: 0
+  IsOnField: 0
+  IsRealNoun: 0
+  IsNounFamily: 0
   CardImg: {fileID: 8031405008568232105}
   OrginParent: {fileID: 0}
   isDragging: 0
@@ -12645,6 +13593,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!225 &8688146149334097136
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001624086989079608}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &9051923367509065188
 GameObject:
   m_ObjectHideFlags: 0

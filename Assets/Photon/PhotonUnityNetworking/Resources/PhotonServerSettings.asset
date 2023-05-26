@@ -45,6 +45,8 @@ MonoBehaviour:
   - GetCard
   - SpreadDeck
   - SpreadCardInfo
+  - ClientGetCard
+  - SetInitial
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
