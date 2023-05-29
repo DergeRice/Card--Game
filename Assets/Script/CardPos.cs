@@ -22,7 +22,11 @@ public class CardPos : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler,
 
             if(DragingObj.IsSpecial) // 스페셜 카드인지 확인
             {
-                if(DragingObj.SpecialCard == "PR") return; //protect는 필드에 놓지마
+                if(DragingObj.SpecialCard == "PR")
+                {
+                    GetComponent<Image>().color = new Color(0,0,0,0f);
+                    return;
+                }  //protect는 필드에 놓지마
                 if(DragingObj.SpecialCard == "RO"){RobEventOccur();}
                 if(DragingObj.SpecialCard == "EX"){ExchangeEventOccur();}
                 string CardName = eventData.pointerDrag.GetComponent<CardScript>().SpecialCard;
@@ -30,6 +34,8 @@ public class CardPos : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler,
                 InputSpecialCard(CardName,GetCardAmount);
                 
                 Destroy(eventData.pointerDrag);
+                GetComponent<Image>().color = new Color(0,0,0,0f);
+    
             }
 
             eventData.pointerDrag.transform.parent = transform;
@@ -41,15 +47,50 @@ public class CardPos : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler,
                 transform.GetChild(0).parent = NetworkManager.networkManager.MyHand.transform;
             }
         }
-        
-        // CardManager.cardManager.CheckOver8Card();
     }
     public void RobEventOccur()
     {
-        //CardManager.cardManager.
+        EventCanvas.eventCanvas.RobOwner.SetActive(true);
+        GetComponent<Image>().color = new Color(0,0,0,0f);
+        NetworkManager nt = NetworkManager.networkManager;
+        
+        for (int i = 0; i < nt.PlayerCanvas.Count; i++)
+        {
+            InGamePlayerUI uI = nt.PlayersIndicator[i].GetComponent<InGamePlayerUI>();
+            nt.PlayerCanvas[i].GetComponent<PlayerScript>().Panel.SetActive(true);
+            if(uI.HasPro)
+            {
+                uI.ShieldIndiCator.SetActive(true);
+            }else if(uI.IsME)
+            {
+                uI.Bg.GetComponent<Image>().color = Color.HSVToRGB(0,0,50);
+            }
+            else
+            {
+                nt.PlayersIndicator[i].GetComponent<Button>().enabled = true;
+            }            
+        }
     }
     public void ExchangeEventOccur()
     {
+        EventCanvas.eventCanvas.ExOwner.SetActive(true);
+        GetComponent<Image>().color = new Color(0,0,0,0f);
+
+        NetworkManager nt = NetworkManager.networkManager;
+        
+        for (int i = 0; i < nt.PlayerCanvas.Count; i++)
+        {
+            InGamePlayerUI uI = nt.PlayersIndicator[i].GetComponent<InGamePlayerUI>();
+            nt.PlayerCanvas[i].GetComponent<PlayerScript>().Panel.SetActive(true);
+            if(uI.IsME)
+            {
+                uI.Bg.GetComponent<Image>().color = Color.HSVToRGB(0,0,50);
+            }
+            else
+            {
+                nt.PlayersIndicator[i].GetComponent<Button>().enabled = true;
+            }            
+        }
 
     }
     
@@ -93,7 +134,6 @@ public class CardPos : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler,
         {
             // SpecialCard = "GET";
             NetworkManager.networkManager.GiveCardClient(Random.Range(0,GameObject.Find("CardDeck").transform.childCount),NetworkManager.networkManager.GetMyPlayerNum(),GetCardAmount);
-            
         }
 
        

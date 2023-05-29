@@ -32,7 +32,9 @@ public class DragAndDrop : MonoBehaviour
         //MovingCanvas.GetComponent<Canvas>().sortingOrder = 20;
         MovingCanvas.transform.position = OrginCanvas.transform.position;
         MovingCanvas.transform.rotation = OrginCanvas.transform.rotation;
+       
         MovingCanvas.name = "MovingCanvas";
+        MovingCanvas.GetComponent<MyHandScript>().enabled = false;
        // .transform.position = OrginCanvas.transform.position;
     }
 }

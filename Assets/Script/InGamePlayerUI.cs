@@ -8,6 +8,8 @@ public class InGamePlayerUI : MonoBehaviour
     public bool IsFirst = false, HasRob  = false, HasPro = false, HasEx = false, IsME = false;
     public GameObject Bg,Crown,Rob,Ex,Pro,CharImg,NickName,MeIndicator,PointObj;
     public List<Sprite> CharImgs = new List<Sprite>();
+
+    public GameObject ShieldIndiCator;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +39,11 @@ public class InGamePlayerUI : MonoBehaviour
     {
         RandNum %= CharImgs.Count;
         CharImg.GetComponent<Image>().sprite = CharImgs[Random.Range(0,CharImgs.Count)];
+    }
+
+    public void RobTargeted()
+    {
+        int i = NetworkManager.networkManager.GetThisIndicatorNum(gameObject);
+        NetworkManager.networkManager.ShowHandAndOutHand(i);
     }
 }

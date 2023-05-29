@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using UnityEditor.SceneManagement;
+// using UnityEditor.SceneManagement;
 using UnityEngine.UI;
 using Photon;
 using Photon.Pun;
@@ -35,7 +35,17 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     public static NetworkManager networkManager;
 
     public GameObject MyHand;
-    public List<GameObject> PlayersHand = new List<GameObject>();
+    public List<GameObject> PlayerCanvas = new List<GameObject>();
+    public List<GameObject> PlayersIndicator = new List<GameObject>();
+
+    public Vector3 MyHandPos;
+
+    public bool IsGameStart = false;
+
+    public int EventTargetNum = -1;
+    public GameObject RobbedCard,ExchangeHostCard,ExchangeSubCard;
+
+    public int ExchangeOwnerNum,ExchangeSubNum;
     
 
     private void Start() 
@@ -246,7 +256,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     {
         if(PhotonNetwork.IsMasterClient)
         {
-            PV.RPC("SpreadCardInfo", RpcTarget.AllBuffered, CardNum, PlayerNum,CardAmount);
+            PV.RPC(nameof(SpreadCardInfo), RpcTarget.AllBuffered, CardNum, PlayerNum,CardAmount);
         }
     }
     public void GiveCardClient(int CardNum,int PlayerNum, int CardAmount)
@@ -262,40 +272,54 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
 
     public int GetMyPlayerNum()
     {
-
-        for (int i = 0; i < PlayersHand.Count; i++)
+        
+        for (int i = 0; i < PlayerCanvas.Count; i++)
         {
-            if(PlayersHand[i].GetComponent<PlayerScript>().IsMine) return i;
+            if(PlayerCanvas[i].GetComponent<PlayerScript>().IsMine) return i;
         }
          
         return -1;
-    
-        
     }
 
-    public void SetInitialFun(int PlayerNum)
+    public string GetPlayerName(int num)
     {
-        PV.RPC("SetInitial", RpcTarget.AllBuffered,PlayerNum);
+        return PhotonNetwork.PlayerList[num].NickName;
+    }
+
+    public void SetInitialFun()
+    {
+        PV.RPC(nameof(SetInitial), RpcTarget.AllBuffered);
     }
 
     [PunRPC]
-    public void SetInitial(int PlayerNum)
+    public void SetInitial()
     {
-        //if(PlayerNum == -1) return;
-        PlayersHand[PlayerNum].GetComponent<PlayerScript>().SetMyProfile(Random.Range(0,30)); //profile 설정
+        // for (int i = 0; i < PhotonNetwork.CountOfPlayers; i++)
+        // {
+        //    if(PlayerCanvas[i].GetComponent<PlayerScript>().MyNum == i)
+        //    {
+        //         PlayerCanvas[i].GetComponent<PlayerScript>().IsMine = true;
+        //    }
+        // }
     }
     
     [PunRPC]
     public void SpreadCardInfo(int CardNum,int PlayerNum,int CardAmount)
     {
         if(PlayerNum == -1) return;
+        if(IsGameStart)
+        {
+            
+            PlayerCanvas[PlayerNum].GetComponent<PlayerScript>().SetMyProfile(Random.Range(0,30));
+            IsGameStart = true;
+        } //profile 설정
         StartCoroutine(GiveCardCo(CardNum,PlayerNum,CardAmount));
     }
 
     IEnumerator GiveCardCo(int CardNum,int PlayerNum,int CardAmount)
     {
         GameObject CardDeck = GameObject.Find("CardDeck");
-        GameObject playerHand = PlayersHand[PlayerNum].GetComponent<PlayerScript>().HandCanvas;
+        GameObject playerHand = PlayerCanvas[PlayerNum].GetComponent<PlayerScript>().HandCanvas;
         //GameObject Card = CardDeck.transform.GetChild(CardNum).gameObject;
         for (int i = 0; i < CardAmount; i++)
         {
@@ -315,19 +339,171 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
         }
     }
 
+    public void ShowHandAndOutHand(int Show)
+    {
+        for (int i = 0; i < PlayerCanvas.Count; i++)
+        {
+            if(PlayerCanvas[i].transform.position != new Vector3(100,100,100))
+            {
+                PlayerCanvas[i].transform.position = new Vector3(100,100,100);
+            }
+        }
+        PlayerCanvas[Show].transform.position = Vector3.zero;
+    }
+    public void ShowHandAndOutHand(GameObject Show)
+    {
+        for (int i = 0; i < PlayerCanvas.Count; i++)
+        {
+            if(PlayerCanvas[i].transform.position != new Vector3(100,100,100))
+            {
+                PlayerCanvas[i].transform.position = new Vector3(100,100,100);
+            }
+        }
+        Show.transform.position = Vector3.zero;
+    }
+    public int GetThisIndicatorNum(GameObject Indi)
+    {
+        for (int i = 0; i < PlayerCanvas.Count; i++)
+        {
+            if(PlayersIndicator[i] == Indi) return i;
+        }
+        return -1;
+    }
+
+
+    public void RobConfirm()
+    {
+        for (int i = 0; i < PlayersIndicator.Count; i++)
+        {
+            PlayersIndicator[i].GetComponent<Button>().enabled = false;
+        }
+        EventCanvas.eventCanvas.RobOwner.SetActive(false);
+        ShowHandAndOutHand(MyHand.GetComponent<MyHandScript>().MyPlayer);
+
+        PV.RPC(nameof(RobEnd),RpcTarget.All,GetMyPlayerNum(),EventTargetNum-1,RobbedCard.name);
+
+        for (int i = 0; i < PlayerCanvas.Count; i++)
+        {
+            PlayerCanvas[i].GetComponent<PlayerScript>().Panel.SetActive(false);
+            PlayersIndicator[i].GetComponent<InGamePlayerUI>().ShieldIndiCator.SetActive(false);
+        }
+    }
+
+    
+
+    [PunRPC]
+    public void RobEnd(int RobHostPlayerNum,int RobSubPlayerNum,string RobedCardName)
+    {
+        //Debug.Log(RobHostPlayerNum+"/"+RobSubPlayerNum+"/"+RobedCardName);
+        RobbedCard = GameObject.Find(RobedCardName);
+        MoveCardOwnerTo(RobHostPlayerNum,RobbedCard);
+        if(MyHand == PlayerCanvas[RobSubPlayerNum].GetComponent<PlayerScript>().HandCanvas) //내가 피해자면
+        {
+            EventCanvas.eventCanvas.RobSub.SetActive(true);
+            EventCanvas.eventCanvas.RobEventSub(RobedCardName);
+        }
+    }
+
+    public void ExchangeRequest(int OpNum,string ExMyCardName,string ExOpCardName)
+    {
+        for (int i = 0; i < PlayersIndicator.Count; i++)
+        {
+            PlayersIndicator[i].GetComponent<Button>().enabled = false;
+        }
+        EventCanvas.eventCanvas.ExOwner.SetActive(false);
+        ShowHandAndOutHand(MyHand.GetComponent<MyHandScript>().MyPlayer);
+
+        PV.RPC(nameof(ExOwnerEnd),RpcTarget.All,GetMyPlayerNum(),OpNum,ExMyCardName,ExOpCardName);
+
+        for (int i = 0; i < PlayerCanvas.Count; i++)
+        {
+            PlayerCanvas[i].GetComponent<PlayerScript>().Panel.SetActive(false);
+            PlayersIndicator[i].GetComponent<InGamePlayerUI>().ShieldIndiCator.SetActive(false);
+        }
+    }
+
+    [PunRPC]
+    public void ExOwnerEnd(int ExHostPlayerNum,int ExSubPlayerNum,string ExMyCardName,string ExOpCardName)
+    {
+        
+        ExchangeHostCard = GameObject.Find(ExMyCardName);
+        ExchangeSubCard = GameObject.Find(ExOpCardName);
+
+        
+        ExchangeOwnerNum = ExHostPlayerNum;
+        ExchangeSubNum = ExSubPlayerNum;
+        if(MyHand == PlayerCanvas[ExchangeSubNum].GetComponent<PlayerScript>().HandCanvas) //내가 피해자면
+        {
+            EventCanvas.eventCanvas.ExSub.SetActive(true);
+            EventCanvas.eventCanvas.ExEventSub(ExMyCardName,ExOpCardName);
+        }
+    }
+
+    public void ExSubEndResult(bool Success,string DenyMsg)
+    {
+        PV.RPC(nameof(ExSubEnd),RpcTarget.All,Success,DenyMsg);
+    }
+
+    [PunRPC]
+    public void ExSubEnd(bool Success, string DenyMsg)
+    {
+        
+        if(Success)
+        {
+            MoveCardOwnerTo(ExchangeOwnerNum,ExchangeSubCard);
+            MoveCardOwnerTo(ExchangeSubNum,ExchangeHostCard);
+            EventCanvas.eventCanvas.DenyText.SetActive(false);
+            EventCanvas.eventCanvas.SuccessText.SetActive(true);
+        }
+        else
+        {
+            EventCanvas.eventCanvas.ReceivedDenyMsg(DenyMsg);
+        }
+
+        if(MyHand == PlayerCanvas[ExchangeOwnerNum].GetComponent<PlayerScript>().HandCanvas) //Owner function
+        {
+            EventCanvas.eventCanvas.ExchangeReceive.SetActive(true);
+            if(Success)
+            {
+                EventCanvas.eventCanvas.DenyText.SetActive(false);
+                EventCanvas.eventCanvas.SuccessText.SetActive(true);
+            }
+            else
+            {
+                EventCanvas.eventCanvas.ReceivedDenyMsg(DenyMsg);
+            }
+        }
+    }
+    public void MoveCardOwnerTo(int To,GameObject Card)
+    {
+        Debug.Log(To+"플레이어에게"+Card.name+"을 줍니다.");
+        // Image Board;
+
+        // if(Card.transform.gameObject.TryGetComponent<Image>(out Board))
+        // {
+        //     Board.color = new Color(0,0,0);
+        // }
+
+        Card.transform.parent = PlayerCanvas[To].GetComponent<PlayerScript>().HandCanvas.transform;
+        
+        Card.transform.localScale = Vector3.one *2;
+        Card.GetComponent<RectTransform>().localPosition = Vector3.zero;
+        Card.transform.rotation = Quaternion.Euler(90,0,0);
+    }
+
 
     
     #endregion 
 }
 
-[InitializeOnLoad]
-public class EditorStartInit
-{
-    static EditorStartInit()
-    {
-        var pathOfFirstScene = EditorBuildSettings.scenes[0].path; // 씬 번호를 넣어주자.
-        var sceneAsset = AssetDatabase.LoadAssetAtPath<SceneAsset>(pathOfFirstScene);
-        EditorSceneManager.playModeStartScene = sceneAsset;
-        Debug.Log(pathOfFirstScene + " 씬이 에디터 플레이 모드 시작 씬으로 지정됨");
-    }
-}
+// [InitializeOnLoad]
+// public class EditorStartInit
+// {
+//     static EditorStartInit()
+//     {
+//         var pathOfFirstScene = EditorBuildSettings.scenes[0].path; // 씬 번호를 넣어주자.
+//         var sceneAsset = AssetDatabase.LoadAssetAtPath<SceneAsset>(pathOfFirstScene);
+//         EditorSceneManager.playModeStartScene = sceneAsset;
+//         Debug.Log(pathOfFirstScene + " 씬이 에디터 플레이 모드 시작 씬으로 지정됨");
+//     }
+// }

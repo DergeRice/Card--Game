@@ -120,6 +120,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &3213003416400441876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +351,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &6721823777919800245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,6 +582,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &5711181296775165825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,6 +738,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4033740414571230053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -886,6 +894,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &8912270628555424351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,6 +1350,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4970565230983244844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1644,6 +1656,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &863565251999414702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1798,6 +1812,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &8827874852694412200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1952,6 +1968,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &1615486678525494097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2106,6 +2124,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &3287363508555835050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2260,6 +2280,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &7290636798953614824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2414,6 +2436,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &1424411956575015544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3033,6 +3057,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &5728669645267787573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3262,6 +3288,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &8265618822842279960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3416,6 +3444,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &109363228648224428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3720,6 +3750,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &509302817910899367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3874,6 +3906,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &6317448003302192667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4028,6 +4062,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &664745285509933516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4182,6 +4218,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4313720195906667961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4336,6 +4374,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &2012690750386984949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4490,6 +4530,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &2046369284978040271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4644,6 +4686,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4571663195853303820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4798,6 +4842,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &7062930297983558232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5102,6 +5148,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &3659626048666446650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5256,6 +5304,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &2645545442124386015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5485,6 +5535,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4395593346414049888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5789,6 +5841,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &5916797682848876249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6018,6 +6072,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &7050915140332448943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6547,6 +6603,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &8695419771462337185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6926,6 +6984,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4761465849734218414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7080,6 +7140,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &280930468033101131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7234,6 +7296,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &5954491476050883448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7613,6 +7677,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4577979640103314694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7767,6 +7833,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4175320578033139112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7921,6 +7989,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4917364560381656540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8075,6 +8145,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &3949902839146842106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8304,6 +8376,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &6688223664422940211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8608,6 +8682,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &6633634705168131270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8762,6 +8838,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &8020506810525842931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9216,6 +9294,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &9192606397909738845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9370,6 +9450,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &1798146667174749752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9749,6 +9831,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4696057721600613506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10053,6 +10137,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &1442116902093124622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10282,6 +10368,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &2994939560397325104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10511,6 +10599,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &3880819272357351521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10665,6 +10755,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &7526530305986138139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10894,6 +10986,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &8329480728462710547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11123,6 +11217,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &418914692470178061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11427,6 +11523,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &3161793147489882549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11581,6 +11679,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &6905586479343433777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11885,6 +11985,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &8104666825777453225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12039,6 +12141,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &6720490781315366101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12193,6 +12297,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4013124961379024665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12422,6 +12528,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &9050046710868601102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12576,6 +12684,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4902318809112285272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12805,6 +12915,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &5132740055339256900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13109,6 +13221,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &7423691442092396447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13263,6 +13377,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &4336003404763224288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13417,6 +13533,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &8300583128026026220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13571,6 +13689,8 @@ MonoBehaviour:
   OrginParent: {fileID: 0}
   isDragging: 0
   ScaleOffset: {x: 0, y: 0}
+  IsMine: 0
+  MyOwnerNum: 0
 --- !u!114 &7320492864969396650
 MonoBehaviour:
   m_ObjectHideFlags: 0

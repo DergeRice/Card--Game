@@ -28,7 +28,7 @@ public class CardScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     GameObject CardImg;
     string CardName;
 
-    [SerializeField] GameObject OrginParent;
+    public GameObject OrginParent;
     
 
 
@@ -37,6 +37,11 @@ public class CardScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     private Vector2 offset;
 
     public Vector2 ScaleOffset;
+
+    private PointerEventData pointer;
+    public bool IsMine = false;
+    public int MyOwnerNum;
+    MyHandScript MyOwnerHandScript;
 
     
     // Start is called before the first frame update
@@ -57,6 +62,12 @@ public class CardScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     {
         if(transform.parent.tag == "CardPos") IsOnField = true;
         else IsOnField = false;
+
+        if(isDragging)
+        {
+            rectTransform.anchoredPosition = (pointer.position * ScaleOffset) + offset;
+        }
+
     }
 
     public void MakeRealNoun()
@@ -231,14 +242,15 @@ public class CardScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
         if(SpecialCard != "") IsSpecial = true;
     
     }
-
+    
     public void OnPointerDown(PointerEventData eventData)
     {
         OrginParent = transform.parent.gameObject;
         transform.parent = DragAndDrop.dragAndDrop.MovingCanvas.transform;
+        DragAndDrop.dragAndDrop.MovingCanvas.GetComponent<Canvas>().sortingOrder = 4;
         offset = rectTransform.anchoredPosition - eventData.position;
-        rectTransform.anchoredPosition = (eventData.position * ScaleOffset) + offset;
         isDragging = true;
+        pointer = eventData;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -261,6 +273,7 @@ public class CardScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
         {
             transform.parent = OrginParent.transform;
         }
+        DragAndDrop.dragAndDrop.MovingCanvas.GetComponent<Canvas>().sortingOrder = 0;
         isDragging = false;
         GetComponent<CanvasGroup>().alpha = 1f;
         GetComponent<CanvasGroup>().blocksRaycasts = true;

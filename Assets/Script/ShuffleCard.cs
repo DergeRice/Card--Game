@@ -30,12 +30,17 @@ public class ShuffleCard : MonoBehaviour
     [ContextMenu("card gogo")]
     public void Initial_Card()
     {
-        NetworkManager.networkManager.PlayersHand = PlayersHand;
+        NetworkManager.networkManager.PlayerCanvas = PlayersHand;
+        NetworkManager.networkManager.PlayersIndicator = PlayerPanel;
         for (int i = 0; i < PlayersHand.Count; i++)
         {
             NetworkManager.networkManager.GiveCard(Random.Range(0,GameObject.Find("CardDeck").transform.childCount),i,5);
+            if(PlayerPanel[i].GetComponent<InGamePlayerUI>().IsME == true)
+            {
+                NetworkManager.networkManager.PlayerCanvas[i].GetComponent<PlayerScript>().IsMine = true;
+            }
         }
-    
+        
         
     }
     private void StartGame() 
@@ -49,15 +54,15 @@ public class ShuffleCard : MonoBehaviour
             PlayersHand.Add(PlayerHand);
             PlayerHand.name = "P"+p.ActorNumber.ToString();
 
-            PlayerPanel[p.ActorNumber-1].SetActive(true); //패널활성화
+            PlayerPanel[p.ActorNumber-1].SetActive(true); //Indicator 패널 활성화
             PlayerPanel[p.ActorNumber-1].GetComponent<InGamePlayerUI>().NickName.GetComponent<Text>().text = p.NickName;
             Debug.Log(p.NickName);
             PlayerHand.GetComponent<PlayerScript>().MyPanel = PlayerPanel[p.ActorNumber-1];
-            NetworkManager.networkManager.SetInitialFun(p.ActorNumber);
             if(p.NickName == PhotonNetwork.NickName) // 내꺼라는소리
             {
                 NetworkManager.networkManager.MyHand = PlayerHand.GetComponent<PlayerScript>().HandCanvas;
-                PlayerHand.GetComponent<PlayerScript>().IsMine = true;
+                NetworkManager.networkManager.MyHandPos = NetworkManager.networkManager.MyHand.transform.position;
+               
                 PlayerPanel[p.ActorNumber-1].GetComponent<InGamePlayerUI>().IsME = true;
             }
             else PlayerHand.transform.position = new Vector3(100,100,100);
