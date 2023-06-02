@@ -35,6 +35,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     public static NetworkManager networkManager;
 
     public GameObject MyHand;
+    public int MyPlayerNum;
     public List<GameObject> PlayerCanvas = new List<GameObject>();
     public List<GameObject> PlayersIndicator = new List<GameObject>();
 
@@ -50,7 +51,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
 
     private void Start() 
     {
+        
         Screen.SetResolution(1920,1080,false);
+    }
+    public void Setting()
+    {
+        MyPlayerNum = MyHand.GetComponent<MyHandScript>().MyPlayerNum-1;
     }
     public static void LogInGame()
     {
@@ -402,6 +408,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
             EventCanvas.eventCanvas.RobSub.SetActive(true);
             EventCanvas.eventCanvas.RobEventSub(RobedCardName);
         }
+        Destroy(GameObject.Find("Card38"));
     }
 
     public void ExchangeRequest(int OpNum,string ExMyCardName,string ExOpCardName)
@@ -454,6 +461,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
             MoveCardOwnerTo(ExchangeSubNum,ExchangeHostCard);
             EventCanvas.eventCanvas.DenyText.SetActive(false);
             EventCanvas.eventCanvas.SuccessText.SetActive(true);
+            Destroy(GameObject.Find("Card18"));
         }
         else
         {
@@ -490,6 +498,67 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
         Card.GetComponent<RectTransform>().localPosition = Vector3.zero;
         Card.transform.rotation = Quaternion.Euler(90,0,0);
     }
+
+    public string GetMaxCurrentRoom()
+    {
+        return PhotonNetwork.PlayerList.Length.ToString();
+    }
+
+    public void RequsetOneCard()
+    {
+        PV.RPC(nameof(RequestCard),RpcTarget.All);
+    }
+    [PunRPC]
+    public void RequestCard()
+    {
+        DealerScript.dealerScript.RequestAmount ++;
+        if(DealerScript.dealerScript.RequestAmount >= PhotonNetwork.PlayerList.Length)
+        {
+            for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+            {
+                NetworkManager.networkManager.GiveCard(Random.Range(0,GameObject.Find("CardDeck").transform.childCount),i,1); 
+            }   
+            DealerScript.dealerScript.RequestAmount = 0;
+            PV.RPC(nameof(EnableBtn),RpcTarget.All);
+        }
+        
+    }
+    [PunRPC]
+    public void EnableBtn()
+    {
+        DealerScript.dealerScript.RequestBtn.GetComponent<Button>().enabled = true;
+    }
+
+    public void SetMyPlayerPoint(int PlayerNum, int Point)
+    {
+        PV.RPC(nameof(SetMyPlayerPointRPC),RpcTarget.All,PlayerNum,Point);
+    }
+
+    [PunRPC]
+    public void SetMyPlayerPointRPC(int PlayerNum,int Point)
+    {
+        Debug.Log(PlayerNum+"플레이어의 점수:"+Point);
+        PlayerCanvas[PlayerNum].GetComponent<PlayerScript>().SetMyPoint(Point);
+    }
+
+    public void IGotFirst(int first)
+    {
+        PV.RPC(nameof(IAmFirst),RpcTarget.All,first);
+    }
+
+    [PunRPC]
+    public void IAmFirst(int first)
+    {
+        if(MyHand == PlayerCanvas[first].GetComponent<PlayerScript>().HandCanvas) // 내가 일등
+        {
+            EventCanvas.eventCanvas.BoostPanel.SetActive(true);
+        }   
+        else
+        {
+            EventCanvas.eventCanvas.BoostSubPanel.SetActive(true);
+        }
+    }
+
 
 
     

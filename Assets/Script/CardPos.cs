@@ -20,6 +20,8 @@ public class CardPos : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler,
                 return;
             }
 
+
+            
             if(DragingObj.IsSpecial) // 스페셜 카드인지 확인
             {
                 if(DragingObj.SpecialCard == "PR")
@@ -27,19 +29,30 @@ public class CardPos : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler,
                     GetComponent<Image>().color = new Color(0,0,0,0f);
                     return;
                 }  //protect는 필드에 놓지마
-                if(DragingObj.SpecialCard == "RO"){RobEventOccur();}
-                if(DragingObj.SpecialCard == "EX"){ExchangeEventOccur();}
-                string CardName = eventData.pointerDrag.GetComponent<CardScript>().SpecialCard;
-                int GetCardAmount = eventData.pointerDrag.GetComponent<CardScript>().GetCardAmount;
+                if(DragingObj.SpecialCard == "RO")
+                {
+                    CardManager.cardManager.RobCard = eventData.pointerDrag;
+                    RobEventOccur();
+                }
+                if(DragingObj.SpecialCard == "EX")
+                {
+                    CardManager.cardManager.ExChangeCard = eventData.pointerDrag;
+                    ExchangeEventOccur();
+                }
+                string CardName = DragingObj.SpecialCard;
+                int GetCardAmount = DragingObj.GetCardAmount;
                 InputSpecialCard(CardName,GetCardAmount);
-                
-                Destroy(eventData.pointerDrag);
+
+                eventData.pointerDrag.transform.parent = GameObject.Find("TrashCan").transform;
+                eventData.pointerDrag.transform.position = GameObject.Find("TrashCan").transform.position;
                 GetComponent<Image>().color = new Color(0,0,0,0f);
     
+            }else
+            {
+                eventData.pointerDrag.transform.parent = transform;
+                eventData.pointerDrag.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
             }
 
-            eventData.pointerDrag.transform.parent = transform;
-            eventData.pointerDrag.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
             //eventData.pointerDrag.transform.localScale = transform.lossyScale;
 
             if(transform.childCount > 1)
@@ -77,7 +90,7 @@ public class CardPos : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler,
         GetComponent<Image>().color = new Color(0,0,0,0f);
 
         NetworkManager nt = NetworkManager.networkManager;
-        
+       
         for (int i = 0; i < nt.PlayerCanvas.Count; i++)
         {
             InGamePlayerUI uI = nt.PlayersIndicator[i].GetComponent<InGamePlayerUI>();

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EventCanvas : MonoBehaviour
 {
     public static EventCanvas eventCanvas;
-    public GameObject RobOwner, RobSub, ExOwner,ExSub, RobbedCardObj;
+    public GameObject RobOwner, RobSub, ExOwner,ExSub, RobbedCardObj,BoostPanel,BoostSubPanel;
 
     public GameObject OwnMyCardExchange, OwnOpCardExchange,SubMyCardExchange, SubOpCardExchange,ExchangeReceive,ExchangeDenyPanel;
 
@@ -21,6 +21,17 @@ public class EventCanvas : MonoBehaviour
     void Update()
     {
         
+    }
+    public void CloseRobPanel()
+    {
+        RobOwner.SetActive(false);
+        NetworkManager nt = NetworkManager.networkManager;
+
+        for (int i = 0; i < nt.PlayerCanvas.Count; i++)
+        {
+            nt.PlayerCanvas[i].GetComponent<PlayerScript>().Panel.SetActive(false);
+        }
+        CardManager.cardManager.RobCard.transform.parent =nt.MyHand.transform;
     }
 
     public void RobConfirmBtn()
@@ -68,9 +79,22 @@ public class EventCanvas : MonoBehaviour
         SuccessText.SetActive(false);
         DenyText.SetActive(true);
         ReceiveMsg.GetComponent<Text>().text = Msg;
+        ReturnMyCardBack();
     }
     public void ConfirmReciveMsg()
     {
         ExchangeReceive.SetActive(false);
+    }
+    public void ReturnMyCardBack()
+    {   NetworkManager nt = NetworkManager.networkManager;
+
+        CardManager.cardManager.ExChangeCard.transform.parent = nt.MyHand.transform;
+
+        OwnMyCardExchange.transform.GetChild(0).gameObject.transform.parent = nt.MyHand.transform;
+        OwnMyCardExchange.transform.GetChild(0).gameObject.transform.position = Vector3.zero;
+        OwnOpCardExchange.transform.GetChild(0).gameObject.transform.parent =  //상대꺼 돌려주기
+        nt.PlayerCanvas[nt.ExchangeSubNum].GetComponent<PlayerScript>().HandCanvas.transform;
+        OwnOpCardExchange.transform.GetChild(0).gameObject.transform.position = Vector3.zero;
+
     }
 }

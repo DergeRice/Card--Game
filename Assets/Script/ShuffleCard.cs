@@ -68,6 +68,7 @@ public class ShuffleCard : MonoBehaviour
             else PlayerHand.transform.position = new Vector3(100,100,100);
             
         }
+        
         Initial_Card();
     }
 
@@ -77,5 +78,8 @@ public class ShuffleCard : MonoBehaviour
         MyDeck = PhotonNetwork.Instantiate("CardDeck",Vector3.zero,Quaternion.identity);
         MyDeck.name = "CardDeck";
         StartGame();
+    }
+    private void Update() {
+        NetworkManager.networkManager.Setting();
     }
 }

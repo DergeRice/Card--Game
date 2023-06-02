@@ -7,12 +7,12 @@ using UnityEngine.UI;
 public class PlayerScript : MonoBehaviour
 {
     public bool HasRob  = false, HasPro = false, HasEx = false, IsME = false;
-    public string UserName,MyPoint;
+    public string UserName;
 
-    public int MyNum;
+    public int MyNum,MyPoint;
     public GameObject HandCanvas;
     public GameObject ParentObj,Panel;
-    public bool IsMine = false;
+    public bool IsMine = false,ImFirst;
     public GameObject PlayerText;
 
     private List<GameObject> MySpecialCardList = new List<GameObject>();
@@ -48,11 +48,25 @@ public class PlayerScript : MonoBehaviour
         if(MyPanel != null)
         {
             //MyPanel.GetComponent<InGamePlayerUI>().NickName.GetComponent<Text>().text = UserName;
-            MyPanel.GetComponent<InGamePlayerUI>().PointObj.GetComponent<Text>().text = MyPoint;
+            //MyPanel.GetComponent<InGamePlayerUI>().PointObj.GetComponent<Text>().text = CardManager.cardManager.MyPoint.ToString();
         }
 
         
         
+    }
+    public void IGotFirst()
+    {
+        MyPanel.GetComponent<InGamePlayerUI>().IsFirst = true;
+    }
+    public void ILostFirst()
+    {
+        MyPanel.GetComponent<InGamePlayerUI>().IsFirst = false;
+    }
+
+    public void SetMyPoint(int point)
+    {
+        MyPoint = point;
+        MyPanel.GetComponent<InGamePlayerUI>().PointObj.GetComponent<Text>().text = MyPoint.ToString()+"점";
     }
     public void CheckMyHandSpecial()
     {
@@ -74,8 +88,11 @@ public class PlayerScript : MonoBehaviour
     public void SetMyStateIndicator()
     {
         if(HasEx) MyPanel.GetComponent<InGamePlayerUI>().HasEx = true;
+        else    MyPanel.GetComponent<InGamePlayerUI>().HasEx = false;
         if(HasPro) MyPanel.GetComponent<InGamePlayerUI>().HasPro = true;
+        else    MyPanel.GetComponent<InGamePlayerUI>().HasPro = false;
         if(HasRob) MyPanel.GetComponent<InGamePlayerUI>().HasRob = true;
+        else    MyPanel.GetComponent<InGamePlayerUI>().HasRob = false;
     }
 
     public void SetMyProfileClickAble()

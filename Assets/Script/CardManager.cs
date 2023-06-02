@@ -12,7 +12,9 @@ public class CardManager : MonoBehaviour
 
     public List<CardScript> InputedCardInfo = new List<CardScript>();
 
-    int MyPoint = 0;
+    public int MyPoint = 0;
+
+    public GameObject ExChangeCard,RobCard;
 
     public GameObject RobbParent;
 
@@ -39,6 +41,7 @@ public class CardManager : MonoBehaviour
             EnableAllChild();
         }
     }
+
 
     private void Update() 
     {
@@ -104,8 +107,16 @@ public class CardManager : MonoBehaviour
     [ContextMenu("Cal")]
     public void CalMySenctence()
     {
-        if(CheckMySentenceAvailable()==0) MyPoint = CalMyPoint();
-        Debug.Log(CheckMySentenceAvailable()+"/"+MyPoint);
+        int temp = CheckMySentenceAvailable();
+        if(temp==0) MyPoint = CalMyPoint();
+        else DealerScript.dealerScript.ShowMeErrorCode(temp);
+
+        DealerScript.dealerScript.SetMyPoint(MyPoint);
+        NetworkManager.networkManager.SetMyPlayerPoint(NetworkManager.networkManager.MyPlayerNum,MyPoint);
+        if(MyPoint>20)
+        {
+            NetworkManager.networkManager.IGotFirst(NetworkManager.networkManager.GetMyPlayerNum());
+        }
     }
 
     public int CheckMySentenceAvailable()
@@ -276,7 +287,7 @@ public class CardManager : MonoBehaviour
                 }
             }
         }
-       
+       Debug.Log(VerbPos.Count+"Verb개수"+NounPos.Count+"Noun개수");
         if(VerbPos.Count < 1 || NounPos.Count < 1) return 1015; // 둘중 하나라도 한개조차 없으면 false return;
         else //둘다 하나씩 있으면 본격적인 검사 시작
         {
