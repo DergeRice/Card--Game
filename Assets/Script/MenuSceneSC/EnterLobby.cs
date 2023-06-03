@@ -11,7 +11,7 @@ public class EnterLobby : MonoBehaviour
     GameObject BringNickname;
 
     [SerializeField]
-    GameObject Lobby;
+    GameObject Lobby,NickNameError;
 
     [SerializeField]
     GameObject LobbyRoomCount, NoRoomIndicator, CreateRoom, RoomPrefeb;
@@ -23,6 +23,11 @@ public class EnterLobby : MonoBehaviour
 
     private void Start() {
         NetworkManager.LoadingPannel = this.LoadingPannel;
+        NetworkManager.RoomPrefeb = this.RoomPrefeb;
+        NetworkManager.RoomParent = this.LobbyRoomCount;
+
+        NetworkManager.PlayerPrefeb = this.PlayerPrefeb;
+        NetworkManager.PlayerParent = this.PlayerParent;
     }
     private void Update() 
     {
@@ -53,16 +58,21 @@ public class EnterLobby : MonoBehaviour
     public void PopupLobby()
     {
         NetworkManager.PlayerNAME = PopUp.transform.Find("NameField").Find("NameText").gameObject.GetComponent<Text>().text;
+
+
+        string temp = NetworkManager.networkManager.CanIGoIn();
+        if (temp != "") 
+        {
+            NickNameError.SetActive(true);
+            NickNameError.GetComponent<Text>().text = temp;
+            return;
+        }
+        
         NetworkManager.JoinLobby();
         PopUp.SetActive(false);
         Lobby.SetActive(true);
         RoomPanel.SetActive(false);
 
-        NetworkManager.RoomPrefeb = this.RoomPrefeb;
-        NetworkManager.RoomParent = this.LobbyRoomCount;
-
-        NetworkManager.PlayerPrefeb = this.PlayerPrefeb;
-        NetworkManager.PlayerParent = this.PlayerParent;
     }
 
     public void PopupCreateRoom()
@@ -76,6 +86,7 @@ public class EnterLobby : MonoBehaviour
     public void ConfirmCreateRoom()
     {
         RoomName = CreateRoom.transform.Find("RoomNameInput").Find("RoomNameText").GetComponent<Text>().text;
+        if (RoomName == "") return;
         CreateRoom.SetActive(false);
         Lobby.SetActive(false);
         RoomPanel.SetActive(true);

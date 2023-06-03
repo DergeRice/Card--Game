@@ -22,6 +22,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     public static GameObject PlayerParent { get; set; }
     public static GameObject PlayerPrefeb { get; set; }
     public static GameObject LoadingPannel { get; set; }
+    public GameObject StartLoadingPanel;
 
     public static List<Player> CurRoomPlayer { get; set; }
 
@@ -66,7 +67,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     {
         Debug.Log("Login Success");
         LoadingPannel.SetActive(false);
-        if(PlayerNAME != null) NetworkManager.JoinLobby();
+        NetworkManager.JoinLobby();
     }
     void Awake() 
     {
@@ -75,17 +76,34 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     }
     public static void JoinLobby()
     {
+        LoadingPannel.SetActive(true);
         PhotonNetwork.JoinLobby();
         PhotonNetwork.LocalPlayer.NickName = PlayerNAME;
         
+    }
+
+    public string CanIGoIn() 
+    {
+        Debug.Log(PhotonNetwork.CountOfPlayers);
+
+        if (PhotonNetwork.CountOfPlayers > 1)
+        {
+            for (int i = 0; i < PhotonNetwork.CountOfPlayers; i++)
+            {
+                if (PhotonNetwork.PlayerList[i].NickName == PlayerNAME) return "이미 사용중인 닉네임입니다.";
+            }
+        }
+        if (PlayerNAME == "") return "닉네임을 지어주세요";
+
+        return "";
     }
     
 
     public override void OnJoinedLobby()
     {
        // Debug.Log("나 로비야");
-        ShowMeRoomList(); 
-
+        ShowMeRoomList();
+        LoadingPannel.SetActive(false);
     }
 
     public static void CreateRoomList(string RoomName)
@@ -97,7 +115,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
 
     public static void JoinRoomList(string RoomName)
     {
-       // Debug.Log($"JoinedRoom: {RoomName}");
+        // Debug.Log($"JoinedRoom: {RoomName}");
+        LoadingPannel.SetActive(true);
         PhotonNetwork.JoinRoom(RoomName);
         RoomNAME = RoomName;
     }
@@ -196,7 +215,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
             GameObject temp = Instantiate(PlayerPrefeb, PlayerParent.transform);
             temp.transform.Find("PlayerName").gameObject.GetComponent<Text>().text = player.NickName;
         }
-       // Debug.Log($"Last Player Count: {ThisRoomPlayerlist.Count}");
+        // Debug.Log($"Last Player Count: {ThisRoomPlayerlist.Count}");
         
     }
 
@@ -216,7 +235,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
         //Debug.Log($"방 입장 완료");
         ShowMePlayerList();
         //Debug.Log(PhotonNetwork.CurrentRoom.GetPlayer(0,true));
-        
+        LoadingPannel.SetActive(false);
+
     }
     public static void LeaveRoomList()
     {
@@ -237,6 +257,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
      {
         PlayerParent.GetComponent<PlayerPhotonSC>().SetReady(PlayerName,Ready);       
      }
+
+    public void SetInvisibleRoom() 
+    {
+        PhotonNetwork.CurrentRoom.IsVisible = false;
+    }
 
     
 
