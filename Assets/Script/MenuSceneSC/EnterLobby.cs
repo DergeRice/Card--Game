@@ -63,8 +63,8 @@ public class EnterLobby : MonoBehaviour
         string temp = NetworkManager.networkManager.CanIGoIn();
         if (temp != "") 
         {
-            NickNameError.SetActive(true);
-            NickNameError.GetComponent<Text>().text = temp;
+            //NickNameError.SetActive(true);
+            //NickNameError.GetComponent<Text>().text = temp;
             return;
         }
         

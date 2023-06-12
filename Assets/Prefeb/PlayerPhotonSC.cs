@@ -64,7 +64,7 @@ public class PlayerPhotonSC : MonoBehaviour, IPunObservable
         // 모든 플레이어가 준비 완료했을 때 할 작업
             Invoke(nameof(LetsGoInGame),5f);
             NetworkManager.networkManager.StartLoadingPanel.SetActive(true);
-            NetworkManager.networkManager.SetInvisibleRoom();
+            //NetworkManager.networkManager.SetInvisibleRoom();
         }
     }
 
