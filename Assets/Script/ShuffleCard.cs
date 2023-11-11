@@ -45,25 +45,26 @@ public class ShuffleCard : MonoBehaviour
     }
     private void StartGame() 
     {
-        foreach (Player p in PhotonNetwork.PlayerList)
+        var inGamePlayers = PhotonNetwork.PlayerList;
+        for (int i = 0; i < inGamePlayers.Length; i++)
         {
             
             GameObject PlayerHand;
             PlayerHand = Instantiate(PlayerObj);
             
             PlayersHand.Add(PlayerHand);
-            PlayerHand.name = "P"+p.ActorNumber.ToString();
+            PlayerHand.name = "P"+i.ToString();
 
-            PlayerPanel[p.ActorNumber-1].SetActive(true); //Indicator 패널 활성화
-            PlayerPanel[p.ActorNumber-1].GetComponent<InGamePlayerUI>().NickName.GetComponent<Text>().text = p.NickName;
-            Debug.Log(p.NickName);
-            PlayerHand.GetComponent<PlayerScript>().MyPanel = PlayerPanel[p.ActorNumber-1];
-            if(p.NickName == PhotonNetwork.NickName) // 내꺼라는소리
+            PlayerPanel[i].SetActive(true); //Indicator 패널 활성화
+            PlayerPanel[i].GetComponent<InGamePlayerUI>().NickName.GetComponent<Text>().text = inGamePlayers[i].NickName;
+
+            PlayerHand.GetComponent<PlayerScript>().MyPanel = PlayerPanel[i];
+            if(inGamePlayers[i].NickName == PhotonNetwork.NickName) // 내꺼라는소리
             {
                 NetworkManager.networkManager.MyHand = PlayerHand.GetComponent<PlayerScript>().HandCanvas;
                 NetworkManager.networkManager.MyHandPos = NetworkManager.networkManager.MyHand.transform.position;
                
-                PlayerPanel[p.ActorNumber-1].GetComponent<InGamePlayerUI>().IsME = true;
+                PlayerPanel[i].GetComponent<InGamePlayerUI>().IsME = true;
             }
             else PlayerHand.transform.position = new Vector3(100,100,100);
             

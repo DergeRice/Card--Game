@@ -39,6 +39,7 @@ public class PlayerPhotonSC : MonoBehaviour, IPunObservable
     {
         bool allReady = true;
 
+        if (PlayerList != null) PlayerList.Clear();
         foreach (Transform child in transform)
         {
             PlayerList.Add(child.gameObject);

@@ -52,6 +52,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     public GameObject AlertCanvas;
 
 
+    bool enterFirst = true;
 
     private void Start() 
     {
@@ -88,7 +89,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
 
     public string CanIGoIn() 
     {
-        Debug.Log(PhotonNetwork.CountOfPlayers);
+        if (enterFirst == false) return "";
+        enterFirst = false;
 
         if (PhotonNetwork.CountOfPlayers > 1)
         {
@@ -108,6 +110,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
             return "2";
         }
 
+        
         return "";
     }
 
@@ -259,11 +262,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks , IPunObservable
     }
     public static void LeaveRoomList()
     {
+        if (PhotonNetwork.CurrentRoom == null)
+            return;
+
         if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
             MyRoomList.Remove(PhotonNetwork.CurrentRoom);
         }
-        PhotonNetwork.LeaveRoom(true);
+        PhotonNetwork.LeaveRoom();
     }
 
     public override void OnLeftRoom()

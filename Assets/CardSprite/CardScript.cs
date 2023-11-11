@@ -257,7 +257,8 @@ public class CardScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     {
         if (isDragging)
         {
-            rectTransform.anchoredPosition = (eventData.position * ScaleOffset) + offset;
+            //rectTransform.anchoredPosition = (eventData.position * ScaleOffset) + offset;
+            rectTransform.anchoredPosition = eventData.position;
             GetComponent<CanvasGroup>().alpha = 0.6f;
             GetComponent<CanvasGroup>().blocksRaycasts = false;
         }

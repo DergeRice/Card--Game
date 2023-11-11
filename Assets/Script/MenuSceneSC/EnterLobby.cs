@@ -21,6 +21,7 @@ public class EnterLobby : MonoBehaviour
     
     string  NickName, RoomName;
 
+
     private void Start() {
         NetworkManager.LoadingPannel = this.LoadingPannel;
         NetworkManager.RoomPrefeb = this.RoomPrefeb;
@@ -103,8 +104,9 @@ public class EnterLobby : MonoBehaviour
 
     public void ExitFromRoom()
     {
-        NetworkManager.LeaveRoomList();
         PopupLobby();
+        NetworkManager.LeaveRoomList();
+        
         //NetworkManager.room
     }
 
